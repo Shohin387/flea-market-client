@@ -1,0 +1,41 @@
+:root {
+    --purple-color-elem: rgb(157, 15, 252)
+}
+
+.navigationPanel {
+    display: grid;
+    grid-template-columns:120px 120px 120px;
+    position: fixed;
+    left: 15%;
+    width: 60%;
+    height: 8%;
+    top: 88.5%;
+    padding-top: 4px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8%;
+
+    /*Тут мы кросоту наводим*/
+    border: 2px solid var(--purple-color-elem);
+    border-radius: 120px;
+    background-color: rgba(240, 248, 255, 0);
+    backdrop-filter: blur(3px);
+}
+
+
+
+.navigationButton {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .7s ease;
+}
+
+.navigationButton:hover {
+    transform:scale(1.05) translateY(-2px) perspective(30px) rotateX(10deg);
+}
+
+.navigationButton img {
+    width: 30px;
+    height: 30px;
+}
