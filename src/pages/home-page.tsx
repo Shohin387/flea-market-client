@@ -4,7 +4,7 @@ import AllCards from "../components/cards-components/allCards";
 const HomePage: FC = (): JSX.Element => {
     return(
         <>
-        <h1>home</h1>
+        <h1 style={{marginLeft: 30 + "px"}}>Home</h1>
         <AllCards />
         </>
     )
