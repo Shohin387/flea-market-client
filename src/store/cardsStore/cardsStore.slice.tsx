@@ -1,5 +1,5 @@
 import { createSlice, Slice } from "@reduxjs/toolkit";
-import CardsData from "../../interfaces/cardData.interface.tsx";
+import {CardsData} from "../../interfaces/cardData.interface.tsx";
 import {cards} from "../datas/cards/cardsData.tsx"
 
 const defStateCards: CardsData[] = cards

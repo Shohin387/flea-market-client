@@ -40,7 +40,7 @@
     margin-left: 6%;
 }
 
-input {
+header input {
     height: 28px;
     border: 0;
     border-radius: 7px;
@@ -62,4 +62,25 @@ input {
 
 input::placeholder {
     color: black;
+}
+
+
+@media (max-width: 900px) {
+    .header {
+        grid-template-columns: 200px 200px 50px 50px;
+
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        grid-template-columns: 100px 100px 30px 30px;
+
+    }
+}
+
+@media (max-width: 738px) {
+    .headerText {
+        display: none;
+    }
 }

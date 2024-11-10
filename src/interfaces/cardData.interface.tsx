@@ -5,5 +5,6 @@ export interface CardsData {
     nameProdyct: string,
     imgSrc: string | null,
     discription: string,
-    price: number
+    price: number,
+    adress: string 
 }

@@ -8,7 +8,7 @@
     position: fixed;
     left: 15%;
     width: 60%;
-    height: 8%;
+    height: 45px;
     top: 88.5%;
     padding-top: 4px;
     justify-content: center;
@@ -19,7 +19,8 @@
     border: 2px solid var(--purple-color-elem);
     border-radius: 120px;
     background-color: rgba(240, 248, 255, 0);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
+    z-index: 10;
 }
 
 
@@ -29,6 +30,12 @@
     height: 30px;
     cursor: pointer;
     transition: all .7s ease;
+
+}
+
+.navigationButton a {
+    max-width: 30px;
+    max-height: 30px;
 }
 
 .navigationButton:hover {
@@ -38,4 +45,16 @@
 .navigationButton img {
     width: 30px;
     height: 30px;
+}
+
+
+@media (max-width : 620px) {
+    .navigationPanel {
+        width: 100%;
+        border-radius: 0;
+        left:0;
+        top: 94%;
+        border: none;
+        border-top:2px solid var(--purple-color-elem) ;
+    }
 }

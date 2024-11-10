@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../statics/styles/panel-navigation.module.css'
+import stylePanel from '../statics/styles/panel-navigation.module.css'
 import Header from "./header";
 
 interface Child {
@@ -11,11 +11,11 @@ const PanelNavigation: React.FC<Child> = ({children}) => {
         <Header/>
 
         {children}
-        <section className={style.navigationPanel}>
+        <section className={stylePanel.navigationPanel}>
             
-            <a href="/"><div className={style.navigationButton} id="home-page"><img src="src/assets/img/home-page.png"/></div></a>
-            <a href="/add-product"><div className={style.navigationButton} id="add-product"><img src="src/assets/img/add-product.png" alt="" /></div></a>
-            <a href="/profile"><div className={style.navigationButton} id="profile"><img src="src/assets/img/profile.png" alt="" /></div></a>
+            <a href="/"><div className={stylePanel.navigationButton} id="home-page"><img src="src/assets/img/home-page.png"/></div></a>
+            <a href="/add-product"><div className={stylePanel.navigationButton} id="add-product"><img src="src/assets/img/add-product.png" alt="" /></div></a>
+            <a href="/profile"><div className={stylePanel.navigationButton} id="profile"><img src="src/assets/img/profile.png" alt="" /></div></a>
         </section>
         </>
     )
