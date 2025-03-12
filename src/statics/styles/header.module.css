@@ -1,5 +1,6 @@
 
 .header {
+
     display: grid;
     grid-template-columns: 200px 400px 50px 50px;
     border-bottom: 2px solid var(--purple-color-elem);
@@ -15,7 +16,6 @@
     color: white;
     border: none;
     border-radius: 5px;
-    box-shadow: 4px 4px rgb(74, 5, 80);
     transition: all ease .6s;
     cursor: pointer;
 }
@@ -80,6 +80,11 @@ input::placeholder {
 }
 
 @media (max-width: 738px) {
+    .header {
+        grid-template-columns: 100px 100px 30px 30px;
+
+    }
+
     .headerText {
         display: none;
     }

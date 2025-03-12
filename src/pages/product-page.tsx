@@ -1,5 +1,5 @@
 import {FC} from "react"
-import ConteinerInfo from "../components/product-page/conteiner-info"
+import ConteinerInfo from "../components/product-page-components/conteiner-info"
 
 
 const ProductPage: FC = (): JSX.Element => {

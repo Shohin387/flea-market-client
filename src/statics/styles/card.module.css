@@ -7,10 +7,10 @@
 
 .card {
     padding-bottom: 10px;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(243, 243, 243);
     margin-left: 10%;
     border:2px solid var(--purple-color-elem);
-    border-radius: 20px;
+    border-radius: 15px;
     height: 70%;
     word-wrap: break-word;
     cursor: pointer;
@@ -23,7 +23,7 @@
 
 .info {
     padding-left: 12px;
-    padding-bottom: 5px;
+    padding-top: 20px;
     padding-right: 12px;
 }
 
@@ -31,7 +31,11 @@
     width: 80%;
     border-radius: 20px;
     height: auto;
+    transition: all .7s ease;
 
+    &:hover {
+        transform: scale(1.04);
+    }
 }
 
 .conteinerImg {
@@ -45,17 +49,7 @@
     border-radius: 20px;
 }
 
-.blockBtnFavorites {
-    display:grid;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-left: 80%;
-    cursor: pointer;
-}
+
 
 
 @media (min-width: 1201px) {
