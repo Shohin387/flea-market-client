@@ -4,7 +4,6 @@ import styleCategory from "../../statics/styles/add-product.module.css"
 const CategoryProduct: FC = (): JSX.Element => {
     const [pathFile, setPathFile] = useState<File  | null>()
     const selectInputRef: any = useRef(null)
-    
     const activationSelected = (el: MutableRefObject<HTMLInputElement>) => {
         el.current.click()
     }

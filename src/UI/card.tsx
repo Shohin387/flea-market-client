@@ -15,8 +15,8 @@ const Card: React.FC<{el: CardsData}> = memo(({el}): JSX.Element => {
             <Link to={"/product/" + el.id}><div className={styleCard.conteinerImg}><img className={styleCard.imgCard} src={el.imgSrc!} alt=""  /></div>
                 <div className={styleCard.info}>
                     <h3 style={{margin: "0px"}}>{el.nameProduct}</h3>
-                    <b>{truncateText(el.discription, 25)}</b><br />
-                    Цена: <b>{el.price}</b>
+                    <b>{truncateText(el.discription, 20)}</b><br />
+                    <div className={styleCard.priceBlock}>Цена: <b>{el.price}</b></div>
                 </div>
             </Link>
         

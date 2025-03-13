@@ -9,7 +9,7 @@ const HomePage: FC = (): JSX.Element => {
 
     return(
         <>
-        <h1 style={{marginLeft: 30 + "px"}}>Home</h1>
+        <h2 style={{marginLeft: 30 + "px"}}>Home</h2>
         <AllCards ReducerData={cardsReducer}/>
         </>
     )

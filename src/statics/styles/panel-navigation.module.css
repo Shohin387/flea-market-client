@@ -67,3 +67,11 @@ body {
         border-top:2px solid var(--purple-color-elem) ;
     }
 }
+
+@media (max-width : 470px) {
+    .navigationPanel {
+        grid-template-columns:repeat(5, 50px);
+        gap: 40px;
+        left: -27px;
+    }
+}
