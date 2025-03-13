@@ -75,3 +75,11 @@ body {
         left: -27px;
     }
 }
+
+@media (max-width : 380px) {
+    .navigationPanel {
+        grid-template-columns:repeat(5, 50px);
+        gap: 20px;
+        left: -23px;
+    }
+}
