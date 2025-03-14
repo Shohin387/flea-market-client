@@ -12,6 +12,7 @@ import { userDataI } from "../../interfaces/userData.interface";
 type TypeAllData = CardsData & userDataI
 
 const ConteinerInfo: FC = (): JSX.Element => {
+
     const {productId}: any = useParams()
     const [isFullScrean, setIsFullScrean] = useState(false)
     const [data, setData] = useState<TypeAllData>()
