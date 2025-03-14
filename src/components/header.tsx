@@ -6,7 +6,7 @@ import { CardsData } from "../interfaces/cardData.interface";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { setStateFoundData } from "../store/FoundDataStore/foundDataStore.slice";
-import { Search } from "lucide-react";
+import {  Search } from "lucide-react";
 
 
 const Header: FC = () => {
@@ -25,6 +25,8 @@ const Header: FC = () => {
                         
                         <input id="inputForSearch" autoComplete="false"  type="text" placeholder="Поиск в Борохолке"/>
                     </div>
+                    
+
                     <button onClick={() => {
                         
                         const inp = document.getElementsByTagName("input")[0]
@@ -37,6 +39,7 @@ const Header: FC = () => {
                         } else navigate('/')
                         
                       }} className={styleHeader.searchBtn} type="button">поиск</button>
+                    
                     
                 </div>
             </header>

@@ -11,6 +11,8 @@
 
 body {
     font-family: robot;
+    margin: 0;
+    padding: 0;
 }
 
 .navigationPanel {
@@ -29,8 +31,8 @@ body {
     /*Тут мы кросоту наводим*/
     border: 1.5px solid var(--purple-color-elem);
     border-radius: 120px;
-    background-color: rgba(240, 248, 255, 0);
-    backdrop-filter: blur(5px);
+    background-color: rgba(245, 245, 245, 0.524);
+    backdrop-filter: blur(4.4px);
     z-index: 10;
 }
 
@@ -62,9 +64,10 @@ body {
         width: 100%;
         border-radius: 0;
         left:0;
-        top: 94%;
+        top: 92%;
         border: none;
         border-top:2px solid var(--purple-color-elem) ;
+        padding-bottom: 20px;
     }
 }
 

@@ -1,14 +1,18 @@
 
 .header {
-
-    display: grid;
-    grid-template-columns: 200px 400px 50px 50px;
-    border-bottom: 2px solid var(--purple-color-elem);
+    position: fixed;
+    width: 100%;
     height: 50px;
+    display: grid;
+    grid-template-columns: 200px 400px ;
+    border-bottom: 2px solid var(--purple-color-elem);
     gap: 60px;
     align-items: center;
     justify-content: center;
-    border-radius: 100px;
+    z-index: 10;
+
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(4.4px);
 }
 
 .searchBtn {
@@ -44,6 +48,7 @@ header input {
     height: 28px;
     border: 0;
     border-radius: 7px;
+    width: 100%;
     background-color: rgb(232, 235, 217);
     color: black;
     padding-left: 30px;
@@ -67,25 +72,39 @@ input::placeholder {
 
 @media (max-width: 900px) {
     .header {
-        grid-template-columns: 200px 200px 50px 50px;
+        grid-template-columns: 200px 400px ;
 
     }
 }
 
-@media (max-width: 700px) {
-    .header {
-        grid-template-columns: 100px 100px 30px 30px;
-
-    }
-}
 
 @media (max-width: 738px) {
     .header {
-        grid-template-columns: 100px 100px 30px 30px;
+        grid-template-columns:400px;
 
     }
 
     .headerText {
         display: none;
+    }
+
+    .searchImg {
+        bottom: 12.5px;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .header {
+        grid-template-columns:290px;
+
+    }
+
+    .searchBlock {
+        grid-template-columns: 230px 70px;
+    }
+
+    .searchImg {
+        bottom: 14.5px;
     }
 }
