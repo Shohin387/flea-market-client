@@ -190,6 +190,13 @@
     .conteiner {
         width: 94vw;
     }
+
+
+    .conteiner img {
+        width: 100%;
+        height: 60%;
+    }
+
     .FSImg {
         width: 260px;
         height: auto;

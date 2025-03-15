@@ -11,7 +11,7 @@ interface Data {
 }
 
 
-const PhotoAndInfo: FC<Data> = memo(({data, setIsFullScrean})=> {
+const PhotoAndInfo: FC<Data> = memo(({data, setIsFullScrean}) => {
     
 
     console.log(data)
