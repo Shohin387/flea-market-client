@@ -21,7 +21,9 @@ const PhotoAndInfo: FC<Data> = memo(({data, setIsFullScrean}) => {
             <Link to={`/`}><ArrowLeft color="black" style={{margin:"10px 20px -20px 2%"}}/></Link>
 
             <div style={{backgroundImage: `url(${data?.imgSrc})`, marginLeft: "3%", marginTop: "30px"}} className={styleProduct.conteiner}>
-                <div className={`${styleProduct.conteiner} `}><img src={data?.imgSrc!} onClick={() => setIsFullScrean((prev) => !prev)} alt="" /></div>
+                <div className={`${styleProduct.conteiner} `}>
+                    <img src={data?.imgSrc!} onClick={() => setIsFullScrean((prev) => !prev)} alt="" />
+                </div>
             </div>
 
             <h1 className={styleProduct.priceProduct}>{data?.price} </h1><RussianRuble size={26} color="black"/>
