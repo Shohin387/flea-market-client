@@ -8,11 +8,8 @@ interface FulllScreanImg {
     img: string
 }
 
+
 export  const  FulllScreanImg: FC<FulllScreanImg> = ({setIsFullScrean, isFullScrean, img}) => {
-
-
-
-
     return (
         <>
         {

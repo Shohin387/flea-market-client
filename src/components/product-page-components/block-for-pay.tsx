@@ -22,9 +22,12 @@ const BlockForPay: FC<{data: TypeAllData}> = ({data}) => {
                     <h2><Link style={{textDecoration: "none", color: "black"}} to={"/user/" + data?.id}>{data?.userName}</Link></h2> 
                     <PlusSquare cursor={"pointer"} size={30} color="var(--purple-color-elem)"/>
                 </div>
+                
 
-                <button className={styleProduct.pay} type="button">Добавить в карзину</button>
-                <button className={classChatBtn}>Написать</button>
+                <div className={styleProduct.btns}>
+                    <button className={classChatBtn}>Написать</button>
+                    <button className={styleProduct.pay} type="button">Добавить в карзину</button>
+                </div>
             </article>
         </section>
     )
