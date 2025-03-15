@@ -17,7 +17,7 @@ const PhotoAndInfo: FC<Data> = memo(({data, setIsFullScrean}) => {
     console.log(data)
     
     return (
-        <div>
+        <article>
             <Link to={`/`}><ArrowLeft color="black" style={{margin:"10px 20px -20px 2%"}}/></Link>
 
             <div style={{backgroundImage: `url(${data?.imgSrc})`, marginLeft: "3%", marginTop: "30px"}} className={styleProduct.conteiner}>
@@ -36,7 +36,7 @@ const PhotoAndInfo: FC<Data> = memo(({data, setIsFullScrean}) => {
                     <p style={{fontSize: "clamp(16px, 3vw, 20px)"}}>{data?.adress}</p>
                 </div>
             </div>
-        </div>
+        </article>
     )
 } )
 

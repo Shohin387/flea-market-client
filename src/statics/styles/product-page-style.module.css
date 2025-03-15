@@ -2,7 +2,7 @@
 .conteiner {
     display: grid;
     width: 650px;
-    height: 470px;
+    height: auto;
     justify-content: center;
     align-items: center;
     filter: blur(-3px);
@@ -203,4 +203,21 @@
     
     }
     
+}
+
+@media (max-width: 480px) {
+    .conteiner {
+        width: 90vw;
+        height: 300px;
+    }
+
+    .conteiner img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .FSImg {
+        width: 240px;
+        height: auto;
+    }
 }
