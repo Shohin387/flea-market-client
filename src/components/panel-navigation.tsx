@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import stylePanel from '../styles/panel-navigation.module.css'
 import Header from "./header";
 import Link from "next/link";
@@ -12,11 +12,6 @@ import { LayoutDashboard, MessageCircle, PlusCircle, ShoppingCart, UserCircle } 
 
 const PanelNavigation = ({children}: {children: React.PropsWithChildren | React.ReactNode}) => {
     const locate = usePathname()
-    const [positionPanel, setPositionPanel] = useState('')
-
-    useEffect(() => {
-      setPositionPanel(`${window.innerHeight - ((10 * window.innerHeight) / 100)}px`)
-    }, [])
     
 
     return (
@@ -26,7 +21,7 @@ const PanelNavigation = ({children}: {children: React.PropsWithChildren | React.
 
             {children}
     
-            <nav style={{top: positionPanel}} className={stylePanel.navigationPanel}>
+            <nav  className={stylePanel.navigationPanel}>
                 <Link href="/home">
                     <div className={stylePanel.navigationButton} id="home">
                         <LayoutDashboard size={30} color="black" opacity={locate == "/home" ? 1 : 0.6}/>
