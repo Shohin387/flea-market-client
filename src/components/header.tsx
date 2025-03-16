@@ -34,9 +34,7 @@ const Header: FC = () => {
                         const inp = document.getElementsByTagName("input")[0]
 
                         if (inp.value) {
-                            const data = searchProduct(cards, inp.value)
-                            dispatch(setStateFoundData(data))
-                            console.log(data)
+                            
                             navigate.push('/found-products?prompt=' + inp.value)
                         } else navigate.push('/home')
                         

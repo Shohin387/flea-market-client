@@ -22,7 +22,6 @@ const ConteinerInfo: FC = () => {
     const joinData = useJoinData(productId)
     useEffect(() => {
         setData(joinData)
-        console.log(productId)
     }, [])
 
     return (
