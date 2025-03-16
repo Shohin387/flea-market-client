@@ -1,0 +1,25 @@
+@font-face {
+	font-family:robot;
+	font-weight: 500;
+	src: url(../assets/fonts/static/Roboto-Regular.ttf);
+}
+
+
+:root {
+	--purple-color-elem: rgb(157, 15, 252)
+}
+
+
+
+body {
+	font-family: robot;
+	margin: 0;
+	padding: 0;
+}
+
+
+option {
+	display: grid;
+	background-color: rgb(255, 255, 255);
+	border: none;
+}

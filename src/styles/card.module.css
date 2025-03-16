@@ -1,0 +1,130 @@
+.mainBlockCard {
+    display: grid;
+    margin-bottom: 40px;
+    grid-auto-rows: 350px;
+    margin-right: 20px;
+}
+
+.card {
+    padding-bottom: 10px;
+    background-color: rgb(243, 243, 243);
+    margin-left: 10%;
+    border:2px solid var(--purple-color-elem);
+    border-radius: 15px;
+    height: 82%;
+    word-wrap: break-word;
+    cursor: pointer;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+}
+
+.info {
+    padding-left: 12px;
+    padding-top: 20px;
+    padding-right: 12px;
+}
+
+.priceBlock {
+    font-size: 14px;
+}
+
+.imgCard {
+    width: 80%;
+    border-radius: 20px;
+    height: auto;
+    transition: all .7s ease;
+
+    &:hover {
+        transform: scale(1.04);
+    }
+}
+
+.conteinerImg {
+    display: grid;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    justify-items: center;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+
+@media (min-width: 2200px) {
+    .mainBlockCard {
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+    }
+}
+
+
+@media (min-width: 1201px) {
+    .mainBlockCard {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+
+@media  (max-width: 1200px) {
+    .mainBlockCard {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+
+@media  (max-width: 870px) {
+    .mainBlockCard {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media  (max-width: 720px) {
+    .mainBlockCard {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .info {
+        padding-top: 8px;
+
+        & h3 {
+            font-size: 17px;
+        }
+
+        & b {
+            font-size: 14px;
+        }
+    }
+}
+
+
+@media (max-width: 572px){
+    .mainBlockCard {
+        display: grid;
+        grid-auto-rows: 250px;
+        grid-template-columns: repeat(2,1fr);
+        margin-bottom: 0px;
+    }
+
+    .info {
+        padding-top: 5px;
+
+        & h3 {
+            font-size: 15px;
+        }
+
+        & b {
+            font-size: 13px;
+        }
+    }
+}
+
+

@@ -1,0 +1,68 @@
+
+
+.navigationPanel {
+    display: grid;
+    grid-template-columns:repeat(5, 120px);
+    position: fixed;
+    left: 15%;
+    width: 60%;
+    height: 45px;
+    padding-top: 4px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8%;
+
+    /*Тут мы кросоту наводим*/
+    border: 1.5px solid var(--purple-color-elem);
+    border-radius: 120px;
+    background-color: rgba(245, 245, 245, 0.524);
+    backdrop-filter: blur(4.4px);
+    z-index: 10;
+}
+
+
+
+.navigationButton {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .7s ease;
+
+}
+
+
+
+.navigationButton:hover {
+    transform:scale(1.05) translateY(-2px) perspective(30px) rotateX(2deg);
+}
+
+
+
+
+@media (max-width : 825px) {
+    .navigationPanel {
+        position: fixed;
+        width: 100%;
+        border-radius: 0;
+        left:0;
+        border: none;
+        border-top:2px solid var(--purple-color-elem) ;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width : 470px) {
+    .navigationPanel {
+        grid-template-columns:repeat(5, 50px);
+        gap: 40px;
+        left: -27px;
+    }
+}
+
+@media (max-width : 380px) {
+    .navigationPanel {
+        grid-template-columns:repeat(5, 50px);
+        gap: 20px;
+        left: -23px;
+    }
+}

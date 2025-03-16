@@ -1,0 +1,223 @@
+
+.conteiner {
+    display: grid;
+    width: 650px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    filter: blur(-3px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.548);
+    backdrop-filter: blur(5px);
+
+}
+
+.conteinerTwo {
+    margin: 0;
+}
+
+.conteiner img{
+    height: 72.5vh;
+}
+
+.nameProduct {
+    
+    font-size: clamp(16px, 5vw, 20px);
+    margin-left: 3%;
+    margin-top: 5px;
+}
+
+.conteinerInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 60px;
+    
+}
+
+.discription {
+    background-color: rgba(235, 235, 235, 0.89);
+    padding:3%;
+    border-radius: 5px;
+    margin-right: 20px;
+    
+}
+
+.discription p {
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+.priceProduct {
+    display: inline-block;
+    margin-left: 3%;
+    font-size: clamp(20px, 5vw, 28px);
+    margin-bottom: 0px;
+    padding-top: 5px;
+}
+
+.profilePhoto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.salesManInfo {
+    display: grid;
+    grid-template-columns: 1fr 3fr 0.5fr;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.blockPay {
+    width: 350px;
+    
+    position: fixed;
+    margin-left: 130px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.pay {
+    margin-top: -10px;
+    border-radius: 6px;
+    background-color: #02d15c;
+    color: white;
+    height: 50px;
+    border: none;
+    font-size: 23px;
+    font-style: bold;
+    cursor: pointer;
+    transition: all .6s ease;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.chatBtn {
+    margin-bottom: 20px;
+    background-color: var(--purple-color-elem);
+}
+
+.ConteinerFSImg {
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    transition: all .6 ease;
+
+    background-color: rgba(0, 0, 0, 0.274);
+}
+
+.wrapper {
+    background-color: black;
+    display: grid;
+    align-items: center;
+    height: 100%;
+}
+
+
+
+.FSImg {
+    width: 350px;
+    height: auto;
+
+}
+
+
+@media (max-width: 1150px) {
+    .blockPay {
+        width: 300px;
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 990px ) {
+
+    .blockPay {
+        margin-left: 40px;
+        width: 170px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }    
+}
+
+@media (max-width: 720px ) {
+    .conteinerInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .blockPay {
+        position: relative;
+        margin-left: 15px;
+        margin-top: 0px;
+        width: 90vw;
+        margin-bottom: 0px;
+    }
+
+    .btns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .pay {
+        font-size: 17px;
+    }
+
+    .conteiner {
+        width: 94vw;
+    }
+
+
+    .conteiner img {
+        width: 100%;
+        height: inherit;
+    }
+
+    .FSImg {
+        width: 260px;
+        height: auto;
+    
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .conteiner {
+        width: 90vw;
+        height: 300px;
+    }
+
+    .conteiner img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .FSImg {
+        width: 270px;
+        height: auto;
+    }
+}

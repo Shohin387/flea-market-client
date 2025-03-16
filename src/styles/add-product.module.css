@@ -1,0 +1,89 @@
+.selectCategory {
+    height: 30px;
+    border: var(--purple-color-elem) 2px solid;
+    border-radius:8px;
+    margin-bottom: 20px;
+}
+
+
+.addProduct {
+    display: grid;
+    justify-content: center;
+    grid-auto-columns: 300px;
+}
+
+.formAddProduct {
+    padding: 20px;
+    border: var(--purple-color-elem) 2px solid;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+}
+
+.selectFile {
+    display: grid;
+    width: 70px;
+    height: 70px;
+    word-wrap: break-word;
+    border: var(--purple-color-elem) 1.5px solid;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    font-size: 12px;
+    padding-left: 15px;
+    border-radius: 10px;
+    position:relative ;
+    left: 20%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.InputDiscriptionProduct {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: var(--purple-color-elem) 2px solid;
+    outline: none;
+    height: 23px;
+    z-index: 1;
+}
+
+.InputDiscriptionProduct::placeholder {
+    color: rgb(58, 58, 58);
+}
+
+.btnForPublic {
+    background-color: var(--purple-color-elem);
+    border: none;
+    color: white;
+    height: 27px;
+    z-index: 1;
+}
+
+.blockForPhoto  {
+    display: grid;
+    height: 120px;
+    position: relative;
+    width: 207px;
+    background-color: rgb(230, 230, 230);
+    left: 120%;
+    overflow: hidden;
+    bottom:  240%;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockForPhoto img {
+    height: 120px;
+}
+
+@media (max-width: 848px) {
+    .blockForPhoto {
+        position: relative;
+
+        left: 0;
+        bottom: 0px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+        margin-left: 15%;
+    }
+}

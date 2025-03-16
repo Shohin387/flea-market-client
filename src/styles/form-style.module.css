@@ -1,0 +1,85 @@
+
+.selectCategory {
+    height: 30px;
+    border: var(--purple-color-elem) 2px solid;
+    border-radius:8px;
+    margin-bottom: 20px;
+}
+
+
+.addProduct {
+    display: grid;
+    justify-content: center;
+    grid-auto-columns: 300px;
+}
+
+.addProduct h1 {
+    position: relative;
+    top: 60px;
+    left: 2%;
+    font-size: 25px;
+}
+
+.formAddProduct {
+    margin-top: 30%;
+    height: 370px;
+    border: var(--purple-color-elem) 2px solid;
+    border-radius:10px;
+    display: grid;
+    grid-auto-rows: 27px;
+    align-content: center;
+    justify-content: center;
+
+}
+
+
+.InputDiscription {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: var(--purple-color-elem) 2px solid;
+    outline: none;
+    height: 23px;
+    z-index: 2;
+    color: black;
+}
+
+
+.btnForPublic {
+    background-color: var(--purple-color-elem);
+    border: none;
+    display: grid;
+    grid-template-columns: 20px 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: -15px;
+    border-radius: 3px;
+    color: white;
+    height: 30px;
+    z-index: 1;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+
+.placeholder {
+    color: rgb(134, 134, 134);
+    position: absolute;
+    margin-top: 3px;
+    font-size: 15px;
+    z-index: 2;
+    transition: all .2s ease;
+    pointer-events: none;
+    margin-left: 10px;
+}
+
+.placeholderActive {
+    color: rgb(25, 25, 26);
+    position: absolute;
+    margin-top: -14px;
+    font-size: 14px;
+    
+    transition: all .2s ease;
+}
+
