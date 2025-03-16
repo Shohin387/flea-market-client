@@ -1,5 +1,6 @@
 import { Dispatch, FC, SetStateAction } from 'react'
 import style from '../../styles/product-page-style.module.css'
+import Image from 'next/image'
 
 
 interface FulllScreanImg {
@@ -16,7 +17,7 @@ export  const  FulllScreanImg: FC<FulllScreanImg> = ({setIsFullScrean, isFullScr
             isFullScrean ?
             <div onClick={() => setIsFullScrean(prev => !prev)} className={style.ConteinerFSImg}>
                 <div className={style.wrapper}>
-                    <img className={style.FSImg} src={img} alt=""/> 
+                    <Image className={style.FSImg} src={img} alt="Full screen image"/> 
                 </div>
             </div>
             : <></>

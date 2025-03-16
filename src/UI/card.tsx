@@ -3,8 +3,7 @@ import {CardsData} from "../interfaces/cardData.interface";
 import styleCard from "@/styles/card.module.css"
 import Link from "next/link";
 import { truncateText } from "../lib/utils";
-
-
+import Image from 'next/image'
 
 
 
@@ -15,7 +14,7 @@ const Card: React.FC<{el: CardsData}> = ({el}) => {
        
             <Link target={'_blank'} href={"/product/" + el.id}>
                 <div className={styleCard.conteinerImg}>
-                    <img alt="Фото товара" className={styleCard.imgCard} src={el.imgSrc!} />
+                    <Image alt="Фото товара" className={styleCard.imgCard} src={el.imgSrc!} />
                 </div>
                 <div className={styleCard.info}>
                     <h3 style={{margin: "0px"}}>{el.nameProduct}</h3>

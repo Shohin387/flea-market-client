@@ -16,7 +16,7 @@ type TypeAllData = CardsData & userDataI
 
 const ConteinerInfo: FC = () => {
 
-    const {productId}: any = useParams()
+    const {productId} = useParams<{productId: string}>()
     const [isFullScrean, setIsFullScrean] = useState(false)
     const [data, setData] = useState<TypeAllData>()
     const joinData = useJoinData(productId)

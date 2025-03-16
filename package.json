@@ -10,24 +10,20 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-redux": "^9.1.2",
-    "redux": "^5.0.1",
     "clsx": "^2.1.1",
     "crypto-js": "^4.2.0",
     "fuse.js": "^7.1.0",
     "lucide-react": "^0.477.0",
-    
-    "next": "15.2.2"
+    "next": "15.2.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.2.2",
-    "@eslint/eslintrc": "^3"
+    "typescript": "^5"
   }
 }

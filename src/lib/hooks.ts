@@ -9,7 +9,7 @@ export const useTypedSelector: TypedUseSelectorHook<MyRootState> = useSelector
 
 type TypeAllData = CardsData & userDataI
 
-export default function useJoinData(id: number) {
+export default function useJoinData(id: number | string) {
     const cardsData: CardsData[] = useTypedSelector(state => state.cardsReducer)
     const userData: userDataI[] = useTypedSelector(state => state.userDataReducer)
     const productData = cardsData.filter((value: CardsData) => value.id == id)[0]

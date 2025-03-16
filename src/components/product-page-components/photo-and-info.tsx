@@ -6,6 +6,7 @@ import { TypeAllData } from "./conteiner-info"
 import { userDataI } from "../../interfaces/userData.interface"
 import { ArrowLeft, RussianRuble } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface Data {
     data: Omit<TypeAllData, keyof userDataI>,
@@ -24,7 +25,7 @@ const PhotoAndInfo: FC<Data> = ({data, setIsFullScrean}) => {
 
             <div style={{backgroundImage: `url(${data?.imgSrc})`, marginLeft: "3%", marginTop: "30px"}} className={styleProduct.conteiner}>
                 <div className={`${styleProduct.conteiner} `}>
-                    <img src={data?.imgSrc!} onClick={() => setIsFullScrean((prev) => !prev)} alt="" />
+                    <Image src={data?.imgSrc!} onClick={() => setIsFullScrean((prev) => !prev)} alt="" />
                 </div>
             </div>
 

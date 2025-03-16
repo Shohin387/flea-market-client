@@ -4,6 +4,7 @@ import { TypeAllData } from "./conteiner-info";
 import { PlusSquare, UserCircle } from "lucide-react";
 import clsx from "clsx";
 import Link from 'next/link'
+import Image from "next/image";
 
 
 const BlockForPay: FC<{data: TypeAllData}> = ({data}) => {
@@ -15,7 +16,7 @@ const BlockForPay: FC<{data: TypeAllData}> = ({data}) => {
             <article className={styleProduct.blockPay}>
                 <div className={styleProduct.salesManInfo}>
                     {data?.profilePhoto ? 
-                    <img className={styleProduct.profilePhoto} src={data?.profilePhoto} alt=""  />
+                    <Image className={styleProduct.profilePhoto} src={data?.profilePhoto} alt="Saleman photo"  />
                      : <UserCircle size={70} enableBackground={"red"} color="var(--purple-color-elem)"/>} 
                     
                     <h2><Link style={{textDecoration: "none", color: "black"}} href={"/user/" + data?.id}>{data?.userName}</Link></h2> 

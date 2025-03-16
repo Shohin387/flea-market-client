@@ -1,13 +1,14 @@
 'use client'
 
-import { useState, FC, useRef, MutableRefObject, JSX } from "react"
+import { useState, FC, useRef, JSX,  RefObject } from "react"
 import styleCategory from "../../styles/add-product.module.css"
+import Image from "next/image"
 
 const CategoryProduct: FC = (): JSX.Element => {
-    const [pathFile, setPathFile] = useState<File  | null>()
-    const selectInputRef: any = useRef(null)
-    const activationSelected = (el: MutableRefObject<HTMLInputElement>) => {
-        el.current.click()
+    const [pathFile, setPathFile] = useState<File | null>()
+    const selectInputRef = useRef<HTMLInputElement>(null)
+    const activationSelected = (el: RefObject<HTMLInputElement | null>) => {
+        el.current?.click()
     }
 
     return (
@@ -34,7 +35,7 @@ const CategoryProduct: FC = (): JSX.Element => {
         <div className={styleCategory.blockForPhoto}>
             {
                 pathFile 
-                ? <><img src={URL.createObjectURL(pathFile!)} alt="" /><br /></>
+                ? <><Image src={URL.createObjectURL(pathFile!)} alt="Your image" /><br /></>
                 : <b>Здесь будут <br /> ваши фото</b>
             }
                 
