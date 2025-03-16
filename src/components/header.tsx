@@ -2,20 +2,12 @@
 
 import  {FC} from "react";
 import styleHeader from "../styles/header.module.css"
-import { searchProduct } from "../lib/utils";
-import { useTypedSelector } from "../lib/hooks";
-import { CardsData } from "../interfaces/cardData.interface";
 import { useRouter } from "next/navigation";
-import { useDispatch } from "react-redux";
-import { setStateFoundData } from "../store/FoundDataStore/foundDataStore.slice";
-import {  Search } from "lucide-react";
+import { Search } from "lucide-react";
 
 
 const Header: FC = () => {
-    const cards: CardsData[] = useTypedSelector(state => state.cardsReducer)
     const navigate = useRouter()
-    const dispatch = useDispatch()
-
 
     return (
         <>
@@ -36,7 +28,7 @@ const Header: FC = () => {
                         if (inp.value) {
                             
                             navigate.push('/found-products?prompt=' + inp.value)
-                        } else navigate.push('/home')
+                        } else navigate.replace('/home')
                         
                       }} className={styleHeader.searchBtn} type="button">поиск</button>
                     

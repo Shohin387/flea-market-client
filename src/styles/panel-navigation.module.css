@@ -16,8 +16,8 @@
     /*Тут мы кросоту наводим*/
     border: 1.5px solid var(--purple-color-elem);
     border-radius: 120px;
-    background-color: rgba(245, 245, 245, 0.524);
-    backdrop-filter: blur(4.4px);
+    background-color: rgba(245, 245, 245, 0.38);
+    backdrop-filter: blur(6px);
     z-index: 10;
 }
 
@@ -46,6 +46,7 @@
         width: 100%;
         border-radius: 0;
         left:0;
+        top:92.5%;
         border: none;
         border-top:2px solid var(--purple-color-elem) ;
         padding-bottom: 20px;
