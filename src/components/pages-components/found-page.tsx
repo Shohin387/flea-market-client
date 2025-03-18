@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation"
 import AllCards from "@/components/allCards"
 import { useTypedSelector } from "@/lib/hooks"
 import { searchProduct } from "@/lib/utils"
+import cardStyle from '@/styles/card.module.css'
 
 
 export default function FoundDataPageComp() {
@@ -15,7 +16,7 @@ export default function FoundDataPageComp() {
 		return (
 				<>
 					<h2 style={{marginLeft: 30 + "px"}}>Результаты по запросу - {prompt?.get("prompt")}</h2>
-					<AllCards ReducerData={data}/>
+					<AllCards className={cardStyle.mainBlockCard} ReducerData={data}/>
 				</>
 		)
 }

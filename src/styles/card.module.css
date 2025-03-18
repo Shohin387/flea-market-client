@@ -5,6 +5,14 @@
     margin-right: 20px;
 }
 
+.similar {
+    display: grid;
+    grid-auto-rows: 450px;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 20px;
+    margin-left: -10px;
+}
+
 .card {
     padding-bottom: 10px;
     background-color: rgb(243, 243, 243);
@@ -125,6 +133,16 @@
             font-size: 13px;
         }
     }
+
+    .similar {
+        grid-auto-rows: 350px;
+    }
 }
 
+
+@media (max-width: 420px) {
+    .similar {
+        grid-auto-rows: 270px;
+    }
+}
 

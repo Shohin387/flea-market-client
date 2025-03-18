@@ -120,6 +120,7 @@
 .ConteinerFSImg {
     position: fixed;
     display: grid;
+    
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -133,6 +134,7 @@
 .wrapper {
     background-color: black;
     display: grid;
+    justify-content: center;
     align-items: center;
     height: 100%;
 }
@@ -140,11 +142,15 @@
 
 
 .FSImg {
-    width: 350px;
-    height: auto;
+    height: 70%;
+    width: 100%;
 
 }
 
+
+.btnForMobileV {
+    display: none;
+}
 
 @media (max-width: 1150px) {
     .blockPay {
@@ -197,10 +203,30 @@
         height: inherit;
     }
 
+    .ConteinerFSImg {
+        grid-template-columns: 100vh;
+        z-index: 30;
+    }
+
+    .wrapper {
+        width: 100%;
+        z-index: 30;
+    }
+
     .FSImg {
-        width: 260px;
-        height: auto;
+        width: 100%;
+        height: 70%;
     
+    }
+
+    .btnForMobileV {
+        display: grid;
+        position: absolute;
+        z-index: 31;
+        bottom: 10px;
+        width: 100%;
+        grid-template-columns: 45% 45%;
+        margin-left: 2.8%;        
     }
     
 }
@@ -214,10 +240,5 @@
     .conteiner img {
         width: 100%;
         height: 100%;
-    }
-
-    .FSImg {
-        width: 270px;
-        height: auto;
     }
 }

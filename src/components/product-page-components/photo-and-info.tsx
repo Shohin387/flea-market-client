@@ -6,6 +6,7 @@ import { TypeAllData } from "./conteiner-info"
 import { userDataI } from "../../interfaces/userData.interface"
 import { ArrowLeft, RussianRuble } from "lucide-react"
 import Link from "next/link"
+import SimilarProducts from "./SimilarProducts"
 
 interface Data {
     data: Omit<TypeAllData, keyof userDataI>,

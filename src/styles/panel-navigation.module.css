@@ -53,7 +53,7 @@
     }
 }
 
-@media (max-width : 470px) {
+@media (max-width : 525px) {
     .navigationPanel {
         grid-template-columns:repeat(5, 50px);
         gap: 40px;
@@ -61,10 +61,11 @@
     }
 }
 
-@media (max-width : 380px) {
+@media (max-width : 410px) {
     .navigationPanel {
         grid-template-columns:repeat(5, 50px);
         gap: 20px;
         left: -23px;
     }
 }
+
