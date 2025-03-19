@@ -127,11 +127,12 @@
     height: 100vh;
     top:0;
     transition: all .6 ease;
-
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.274);
 }
 
 .wrapper {
+    overflow: auto;
     background-color: black;
     display: grid;
     justify-content: center;
@@ -142,8 +143,8 @@
 
 
 .FSImg {
-    height: 70%;
-    width: 100%;
+    height: auto;
+    width: auto;
 
 }
 
@@ -204,29 +205,39 @@
     }
 
     .ConteinerFSImg {
-        grid-template-columns: 100vh;
+        grid-template-columns: 1fr;
+        grid-auto-columns: 100%;
         z-index: 30;
+        
     }
 
     .wrapper {
         width: 100%;
+        grid-template-columns: 1fr;
+        align-content: center;
         z-index: 30;
     }
 
     .FSImg {
-        width: 100%;
-        height: 70%;
-    
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
     }
+
+    
 
     .btnForMobileV {
         display: grid;
         position: absolute;
         z-index: 31;
-        bottom: 10px;
+        bottom: 0px;
         width: 100%;
-        grid-template-columns: 45% 45%;
-        margin-left: 2.8%;        
+        justify-content: center;
+        grid-template-columns: 45% 45%;   
+    }
+
+    .conteinerInfo {
+        overflow:hidden
     }
     
 }
@@ -238,7 +249,11 @@
     }
 
     .conteiner img {
-        width: 100%;
+        width: auto;
         height: 100%;
+    }
+
+    .FSImg {
+        width: 100%;
     }
 }
