@@ -9,7 +9,6 @@ const ProductPage: React.FC = () => {
             <Suspense fallback={<div>Загрузка...</div>}>
                 <ConteinerInfo />
             </Suspense>
-            
         </section>
     )
 } 
