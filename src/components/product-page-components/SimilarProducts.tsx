@@ -12,10 +12,8 @@ export default function SimilarProducts({category}: {category: string | undefine
 	const [data, setData] = useState<CardsData[]>([])
 	useEffect(() => {
 		const similar = cards.filter(value => value.category == category)
-		console.log(category)
 		setData(similar)
 	}, [category])
-	console.log(data)
 
 	return (
 		<footer>

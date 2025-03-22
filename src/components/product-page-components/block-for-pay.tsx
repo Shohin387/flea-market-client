@@ -1,10 +1,12 @@
+'use client'
+
 import { FC } from "react";
 import styleProduct from "../../styles/product-page-style.module.css"
 import { TypeAllData } from "./conteiner-info";
-import { PlusSquare, UserCircle } from "lucide-react";
+import { PlusSquare } from "lucide-react";
 import clsx from "clsx";
 import Link from 'next/link'
-import Image from "next/image";
+import Avatar from "@/UI/Avatar";
 
 
 const BlockForPay: FC<{data: TypeAllData}> = ({data}) => {
@@ -15,11 +17,9 @@ const BlockForPay: FC<{data: TypeAllData}> = ({data}) => {
         <section >
             <article className={styleProduct.blockPay}>
                 <div className={styleProduct.salesManInfo}>
-                    {data?.profilePhoto ? 
-                    <Image className={styleProduct.profilePhoto} src={data?.profilePhoto} alt="Saleman photo"  />
-                     : <UserCircle size={70} enableBackground={"red"} color="var(--purple-color-elem)"/>} 
+                    <Avatar urlAvatar={data?.profilePhoto} userName={data?.name}/>
                     
-                    <h2><Link style={{textDecoration: "none", color: "black"}} href={"/user/" + data?.id}>{data?.userName}</Link></h2> 
+                    <h2><Link style={{textDecoration: "none", color: "black"}} href={"/user/" + data?.id}>{data?.name}</Link></h2> 
                     <PlusSquare cursor={"pointer"} size={30} color="var(--purple-color-elem)"/>
                 </div>
                 

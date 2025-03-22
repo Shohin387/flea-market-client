@@ -1,3 +1,4 @@
+'use client'
 import ConteinerInfo from "@/components/product-page-components/conteiner-info"
 import { Suspense } from "react"
 

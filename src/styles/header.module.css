@@ -5,7 +5,7 @@
     height: 50px;
     display: grid;
     grid-template-columns: 200px 400px ;
-    border-bottom: 2px solid var(--purple-color-elem);
+    border-bottom: 1.5px solid var(--purple-color-elem);
     gap: 60px;
     align-items: center;
     justify-content: center;

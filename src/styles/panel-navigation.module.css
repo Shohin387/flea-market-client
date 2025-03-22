@@ -48,7 +48,7 @@
         left:0;
         top:92.5%;
         border: none;
-        border-top:2px solid var(--purple-color-elem) ;
+        border-top:1.3px solid var(--purple-color-elem) ;
         padding-bottom: 20px;
     }
 }

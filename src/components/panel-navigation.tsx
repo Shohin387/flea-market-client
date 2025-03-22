@@ -17,7 +17,7 @@ const PanelNavigation = ({children}: {children: React.PropsWithChildren | React.
     return (
         <>
             <Header/>
-            <div  style={{paddingBottom: "60px"}}></div>
+            <div  style={{paddingBottom: "53px"}}></div>
 
             {children}
     

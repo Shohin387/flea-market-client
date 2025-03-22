@@ -8,10 +8,11 @@ import { truncateText } from "../lib/utils";
 
 
 const Card: React.FC<{el: CardsData}> = ({el}) => {
-    console.log(el)
+    
     return (
-        <>
-       
+        
+        <data style={{pointerEvents: `${el.sold ? "none" : "auto"}`, opacity: el.sold ? 0.5 : 1}}>
+        
             <Link href={"/product/" + el.id}>
                 <div className={styleCard.conteinerImg}>
                     <img alt="Фото товара" className={styleCard.imgCard} src={el.imgSrc!} />
@@ -23,7 +24,7 @@ const Card: React.FC<{el: CardsData}> = ({el}) => {
                 </div>
             </Link>
         
-        </>
+        </data>
     )
 }
 

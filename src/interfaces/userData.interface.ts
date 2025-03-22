@@ -1,7 +1,9 @@
 export interface userDataI {
     id: number,
-    userName: string,
+    name: string,
     profilePhoto?: string,
     email: string,
-    password: string
+    password: string,
+    dateRegestration: string,
+    userName: string
 }

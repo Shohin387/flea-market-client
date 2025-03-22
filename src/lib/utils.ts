@@ -3,7 +3,7 @@ import { CardsData } from "../interfaces/cardData.interface"
 
 
 export function truncateText(text: string, maxLength: number) {
-    if (text.length <= 25 ) return text
+    if (text.length <= maxLength ) return text
     
     return text.split("").slice(0, maxLength - 3).join("") + "..."
 }
@@ -22,3 +22,10 @@ export function searchProduct(items: CardsData[], searchElem: string) {
     return resultProcess
 }
 
+
+
+export default function randomColor(arr: string[]): string {
+    const randomIndex = Math.floor(Math.random() * arr.length)
+
+    return arr[randomIndex]
+}

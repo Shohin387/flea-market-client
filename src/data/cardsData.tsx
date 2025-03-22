@@ -1,4 +1,4 @@
-import {CardsData} from "../../interfaces/cardData.interface"
+import {CardsData} from "../interfaces/cardData.interface"
 const card: CardsData[] = [
     {
         id: 1,
@@ -9,7 +9,8 @@ const card: CardsData[] = [
         price: 2000,
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
-        coordinate: {lat: 9, lng: 8}
+        coordinate: {lat: 9, lng: 8},
+        sold: false
     },
     {
         id: 2,
@@ -20,7 +21,8 @@ const card: CardsData[] = [
         price: 800,
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
-        coordinate: {lat: 9, lng: 8}
+        coordinate: {lat: 9, lng: 8},
+        sold: false
 
     },
     {
@@ -32,7 +34,8 @@ const card: CardsData[] = [
         price: 2800,
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Цифровая техника',
-        coordinate: {lat: 9, lng: 8}
+        coordinate: {lat: 9, lng: 8},
+        sold: false
 
     },
     {
@@ -44,7 +47,8 @@ const card: CardsData[] = [
         price: 1000,
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
-        coordinate: {lat: 9, lng: 8}
+        coordinate: {lat: 9, lng: 8},
+        sold: false
     }, 
     {
         id: 5,
@@ -55,7 +59,8 @@ const card: CardsData[] = [
         price: 40000,
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Цифровая техника',
-        coordinate: {lat: 9, lng: 8}
+        coordinate: {lat: 9, lng: 8},
+        sold: false
     },
     {
         id: 6,
@@ -66,19 +71,21 @@ const card: CardsData[] = [
         price: 1000,
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Цифровая техника',
-        coordinate: {lat: 9, lng: 8}
+        coordinate: {lat: 9, lng: 8},
+        sold: true
 
     },
     {
         id: 7,
-        userId: 1,
+        userId: 2,
         nameProduct: "Компьютер",
         imgSrc: "https://avatars.mds.yandex.net/i?id=f100273e9cc22b5431fa65e6cf16e48639c3aca4-5178729-images-thumbs&n=13",
         discription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ratione praesentium error nisi provident ut, quos earum architecto fugiat debitis nesciunt, ad porro. Perspiciatis, dolores, itaque repellat quibusdam exercitationem doloremque accusantium illo aliquid molestias quos blanditiis recusandae commodi quaerat deserunt! Voluptas fuga, veritatis assumenda quia amet quos voluptatum atque provident.",
         price: 130000,
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Цифровая техника',
-        coordinate: {lat: 9, lng: 8}
+        coordinate: {lat: 9, lng: 8},
+        sold: false
 
     },
     

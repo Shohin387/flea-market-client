@@ -10,5 +10,6 @@ export interface CardsData {
     price: number,
     adress: string 
     category: TypeCategory,
-    coordinate: TypeCoordinate
+    coordinate: TypeCoordinate,
+    sold: boolean
 }

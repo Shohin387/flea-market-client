@@ -14,7 +14,8 @@ import SimilarProducts from "./SimilarProducts";
 
 
 
-type TypeAllData = CardsData & userDataI
+type TypeAllData = CardsData & {name: string, userId: number}
+
 
 const ConteinerInfo: FC = () => {
     const {productId} = useParams<{productId: string}>()
@@ -22,6 +23,7 @@ const ConteinerInfo: FC = () => {
     const [data, setData] = useState<TypeAllData>()
     const joinData = useJoinData(productId)
     useEffect(() => {
+        
         setData(joinData)
     }, [])
     

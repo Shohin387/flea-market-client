@@ -1,6 +1,6 @@
 import { Slice, createSlice } from "@reduxjs/toolkit";
 import { userDataI } from "../../interfaces/userData.interface";
-import { salesmanData } from "../datas/userData";
+import { salesmanData } from "../../data/userData";
 
 
 const initialState: userDataI[] = salesmanData
