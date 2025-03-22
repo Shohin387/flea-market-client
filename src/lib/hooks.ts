@@ -9,7 +9,7 @@ export const useTypedSelector: TypedUseSelectorHook<MyRootState> = useSelector
 export const useTypedDispatch = useDispatch<typeof Store.dispatch>
 
 
-type TypeAllData = CardsData & {name: string, userId: number}
+type TypeAllData = CardsData & {name: string, userId: number, profilePhoto?: string}
 export default function useJoinData(id: number | string) {
     const cardsData: CardsData[] = useTypedSelector(state => state.cardsReducer)
     const userData: userDataI[] = useTypedSelector(state => state.userDataReducer)
@@ -18,7 +18,7 @@ export default function useJoinData(id: number | string) {
     userData.forEach(value => {
         if (value.id == productData.userId) {
             console.log('similar')
-            allData = [{...productData, name: value.name, userId: value.id}]
+            allData = [{...productData, name: value.name, userId: value.id, profilePhoto: value.profilePhoto}]
             console.log(allData)
             
         }

@@ -14,7 +14,7 @@ import SimilarProducts from "./SimilarProducts";
 
 
 
-type TypeAllData = CardsData & {name: string, userId: number}
+type TypeAllData = CardsData & {name: string, userId: number, profilePhoto?: string}
 
 
 const ConteinerInfo: FC = () => {
