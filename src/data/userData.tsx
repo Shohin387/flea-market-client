@@ -1,4 +1,5 @@
 import { userDataI } from "@/interfaces/userData.interface"
+import vor from '@/assets/vor.jpg'
 
 export const salesmanData: userDataI[] = [
     {
@@ -7,6 +8,7 @@ export const salesmanData: userDataI[] = [
         userName: '@AYE',
         email: "one@gmail.com",
         password: "dkdvdd",
+        profilePhoto: vor,
         dateRegestration: '14.02.2025',
     },
 
