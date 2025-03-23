@@ -23,7 +23,19 @@ export const Subs: SubsI[] = [
 	},
 	{
 		id:5,
-		cumirID: 1,
-		subscriberID: 3
-	}
+		cumirID: 3,
+		subscriberID: 1
+	},
+
+	{
+		id:5,
+		cumirID: 3,
+		subscriberID: 2
+	},
+
+	{
+		id:7,
+		cumirID: 3,
+		subscriberID: 4
+	},
 ]

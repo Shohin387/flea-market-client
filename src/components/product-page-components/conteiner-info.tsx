@@ -8,7 +8,6 @@ import useJoinData from "../../lib/hooks";
 import { CardsData } from "../../interfaces/cardData.interface";
 import { useParams } from "next/navigation";
 import {FulllScreanImg} from "./FullScreanImg";
-import { userDataI } from "../../interfaces/userData.interface";
 import SimilarProducts from "./SimilarProducts";
 
 

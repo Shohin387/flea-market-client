@@ -186,7 +186,6 @@
 
     .btns {
         display: grid;
-        position:fixed;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
@@ -229,7 +228,7 @@
 
     .btnForMobileV {
         display: grid;
-        position: absolute;
+        position: fixed;
         z-index: 31;
         bottom: 0px;
         width: 100%;

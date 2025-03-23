@@ -155,14 +155,22 @@
 
 @media (max-width:650px) {
 	.headerProfile {
-		overflow-y: inherit;
-		margin-bottom: 100px;
+		overflow-y: initial;
+		margin-bottom: 0;
 	}
 	.conteinerProfile {
 		grid-template-columns: 100%;
+		grid-template-rows: 1fr 1fr;
 	}
 
 	.conteinerProfile {
 		padding: 10px;
 	}
+
+	.productCnt {
+		overflow: initial;
+		margin-top: -135px;
+	}
+	
+	
 }

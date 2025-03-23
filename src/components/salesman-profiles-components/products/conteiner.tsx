@@ -8,6 +8,8 @@ import AllCards from "@/components/allCards";
 import cardStyle from '@/styles/card.module.css'
 import profileStyle from '@/styles/profile.module.css'
 import clsx from "clsx";
+import Image from 'next/image'
+import noProduct from '@/assets/no-product.svg'
 
 
 export default function ConteinerProduct() {
@@ -32,8 +34,13 @@ export default function ConteinerProduct() {
 			</div>
 			
 			<div>
-				
-				<AllCards onlySold={sold} className={columns} ReducerData={data}/>
+				{data.length
+					? <AllCards onlySold={sold} className={columns} ReducerData={data}/>
+					: <div style={{width: '100%', height: 'auto', display: 'grid', justifyContent: 'center', alignItems: 'center'}}>
+							<h3>У продовца еще нет товыров</h3>
+							<Image width={300} height={300} src={noProduct} alt="no" />
+						</div>
+				}
 			</div>
 			
 		</section>
