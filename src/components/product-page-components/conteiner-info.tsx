@@ -9,11 +9,12 @@ import { CardsData } from "../../interfaces/cardData.interface";
 import { useParams } from "next/navigation";
 import {FulllScreanImg} from "./FullScreanImg";
 import SimilarProducts from "./SimilarProducts";
+import { StaticImageData } from "next/image";
 
 
 
 
-type TypeAllData = CardsData & {name: string, userId: number, profilePhoto?: string}
+type TypeAllData = CardsData & {name: string, userId: number, profilePhoto?: string | StaticImageData}
 
 
 const ConteinerInfo: FC = () => {
