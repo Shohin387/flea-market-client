@@ -35,7 +35,6 @@ export default function SubscribersConteiner({cumirID, setCount, className=profi
 					))
 				}
 			</section>
-
 			: 
 				<div  className={profileStyle.mainBlockSupscribers} style={{alignItems: 'center', justifyItems: 'center'}}>
 					<b style={{fontSize: '25px'}}>Нету подписчиков</b>

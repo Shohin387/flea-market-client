@@ -17,7 +17,7 @@ const BlockForPay: FC<{data: TypeAllData}> = ({data}) => {
         <section >
             <article className={styleProduct.blockPay}>
                 <div className={styleProduct.salesManInfo}>
-                    <Avatar radius={50} urlAvatar={data?.profilePhoto} userName={data?.name}/>
+                    <Avatar radius={50} size={100} urlAvatar={data?.profilePhoto} userName={data?.name}/>
                     
                     <h2><Link style={{textDecoration: "none", color: "black"}} href={"/user/" + data?.userId}>{data?.name}</Link></h2> 
                     <PlusSquare cursor={"pointer"} size={30} color="var(--purple-color-elem)"/>

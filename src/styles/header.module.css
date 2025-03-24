@@ -46,14 +46,15 @@
 
 .headerInput {
     height: 28px;
-    border: 0;
-    border-radius: 7px;
+    border: 1.5px solid var(--purple-color-elem);
+    border-radius: 6px;
     width: 100%;
-    background-color: rgb(232, 235, 217);
+    background-color: rgb(255, 255, 255);
     color: black;
     padding-left: 30px;
     outline: none;
     width: 80%;
+    box-shadow: 0px 3px 8px 3px  rgba(197, 152, 228, 0.589);
 }
 
 .searchImg {

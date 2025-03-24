@@ -16,7 +16,7 @@ export default function SimilarProducts({category}: {category: string | undefine
 	}, [category])
 
 	return (
-		<footer>
+		<footer style={{marginLeft: '15px'}}>
 			<h1 style={{marginLeft: "3%", fontSize: "23px"}}>Похожие товары</h1>
 			<AllCards className={cardStyle.similar} ReducerData={data}/>
 		</footer>

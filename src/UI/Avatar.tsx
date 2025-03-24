@@ -26,10 +26,11 @@ export default function Avatar({urlAvatar, userName, size=100, radius=0}: {urlAv
 						overflow: 'hidden', 
 						borderRadius: `${radius}%`,
 
-					}} className={profileStyle.centerItem}>
-						<Image alt="Фото профиля" style={{borderRadius: `${radius}%`, width: `130%`, height: '100%', overflow: 'hidden'}} src={urlAvatar!} />
+					}} className={`${profileStyle.centerItem}`}>
+						<Image alt="Фото профиля" style={{borderRadius: `${radius}%`, width: `120%`, height: '100%'}} src={urlAvatar!} />
+						<div className={profileStyle.photoShadowBottom}></div>
 					</div>
-				: <div style={{backgroundColor: color, width: `${size}px`, height:`${size}px` }} className={profileStyle.noPhoto}>
+				: <div style={{backgroundColor: color, width: `${size}px`, height:`${size}px`, marginBlockStart: '20px', marginLeft: '20px'}} className={profileStyle.noPhoto}>
 					<h1 style={{fontSize: `${size / 2}px`}}>{userName?.split('')[0]}</h1>
 				</div>
 			}

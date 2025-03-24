@@ -6,34 +6,35 @@ import SubscribersConteiner from "./subsComponent/SubscribersMainBlock"
 import Avatar from "@/UI/Avatar"
 import clsx from "clsx"
 import { ContextUserData } from "./conteiner-profile"
+import { Send } from "lucide-react"
 
 
 export default function HeaderProfile({id}: {id: string}) {
     const moreSubsClass = clsx(profileStyle.textLink, profileStyle.moreSubs)
     const classSubsBtn = clsx(profileStyle.subsBtn, profileStyle.chatBtn)
-    const [hidden, setHidden] = useState(true)
-    const hiddenMoreSubs = clsx(profileStyle.mainBlockSupscribers, hidden ? profileStyle.hidden : '')
     const [countSubs, setCountSubs] = useState(0)
     const data = useContext(ContextUserData)
-    console.log(hiddenMoreSubs)
     
 
     return (
         <section className={profileStyle.headerProfile}>
             <div className={profileStyle.photoProfile}>
                 <Avatar urlAvatar={data?.profilePhoto} userName={data?.name}/>
-                <h3>{data?.name}</h3>
+                <h3 className={data?.profilePhoto ? profileStyle.name : profileStyle.m_20}>{data?.name}</h3>
+                
+                <p className={data?.profilePhoto ? `${profileStyle.countSubs} ${profileStyle.m_20} ${profileStyle.mobile}` : `${profileStyle.m_20}`} >{countSubs} Подписчиков<br /></p>
 
-                <p style={{fontSize: "13px"}}>{countSubs} подписчиков, 0 подписок <br />
-                На Барахолке с {data?.dateRegestration}</p>
+                <h2 className={profileStyle.m_20} style={{fontSize: "20px",  marginTop: '20px'}}>{data?.userName}<br /> 
+                <b style={{fontSize: '13px', fontStyle: 'normal'}}>Имя пользователя</b></h2>
+                <p className={profileStyle.m_20}  style={{fontSize: "13px"}}>На Барахолке с {data?.dateRegestration}</p>
+
             </div>
 
             
-            <article>
-                <button className={classSubsBtn}>Написать</button>
+            <article className={profileStyle.m_20}>
+                <button  className={classSubsBtn}><Send size={20} style={{position:'absolute',marginTop: '1px', marginLeft: '-30px'}}/> Написать</button>
                 <button className={profileStyle.subsBtn} type="button">Подписаться</button> <br />
-                <SubscribersConteiner className={hiddenMoreSubs} setCount={setCountSubs} cumirID={+id}/>
-                {countSubs > 3 && <b onClick={() => setHidden(prev => !prev)} className={moreSubsClass}>{hidden ?"Показать еще" : "Скрыть"}</b>}
+                <SubscribersConteiner className={profileStyle.mainBlockSupscribers} setCount={setCountSubs} cumirID={+id}/>
             </article>
         </section>
     )
