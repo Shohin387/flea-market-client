@@ -32,7 +32,7 @@ export default function HeaderProfile({id}: {id: string}) {
 
             
             <article className={profileStyle.m_20}>
-                <button  className={classSubsBtn}><Send size={20} style={{position:'absolute',marginTop: '1px', marginLeft: '-30px'}}/> Написать</button>
+                <button  className={classSubsBtn}><Send size={20}/> Написать</button>
                 <button className={profileStyle.subsBtn} type="button">Подписаться</button> <br />
                 <SubscribersConteiner className={profileStyle.mainBlockSupscribers} setCount={setCountSubs} cumirID={+id}/>
             </article>
