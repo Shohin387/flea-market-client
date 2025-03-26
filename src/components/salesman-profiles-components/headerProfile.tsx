@@ -20,12 +20,12 @@ export default function HeaderProfile({id}: {id: string}) {
         <section className={profileStyle.headerProfile}>
             <div className={profileStyle.photoProfile}>
                 <Avatar urlAvatar={data?.profilePhoto} userName={data?.name}/>
-                <h3 className={data?.profilePhoto ? profileStyle.name : profileStyle.m_20}>{data?.name}</h3>
+                <h3 className={data?.profilePhoto ? clsx(profileStyle.name, profileStyle.m_20) : profileStyle.m_20}>{data?.name}</h3>
                 
                 <p className={data?.profilePhoto ? `${profileStyle.countSubs} ${profileStyle.m_20} ${profileStyle.mobile}` : `${profileStyle.m_20}`} >{countSubs} Подписчиков<br /></p>
 
                 <h2 className={profileStyle.m_20} style={{fontSize: "20px",  marginTop: '20px'}}>{data?.userName}<br /> 
-                <b style={{fontSize: '13px', fontStyle: 'normal'}}>Имя пользователя</b></h2>
+                <b style={{fontSize: '13px', fontStyle: 'normal', opacity: 0.6}}>Имя пользователя</b></h2>
                 <p className={profileStyle.m_20}  style={{fontSize: "13px"}}>На Барахолке с {data?.dateRegestration}</p>
 
             </div>
