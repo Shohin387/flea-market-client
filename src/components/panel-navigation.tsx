@@ -24,31 +24,31 @@ const PanelNavigation = ({children}: {children: React.PropsWithChildren | React.
             <nav  className={stylePanel.navigationPanel}>
                 <Link href="/home">
                     <div className={stylePanel.navigationButton} id="home">
-                        <LayoutDashboard size={30} color="black" opacity={locate == "/home" ? 1 : 0.6}/>
+                        <LayoutDashboard size={30} color="white" opacity={locate == "/home" ? 1 : 0.6}/>
                     </div>
                 </Link>
 
                 <Link href="/profile">
                     <div className={stylePanel.navigationButton} id="profile">
-                        <ShoppingCart size={30} opacity={locate == "/basket" ? 1 : 0.6} color="black"/>
+                        <ShoppingCart size={30} opacity={locate == "/basket" ? 1 : 0.6} color="white"/>
                     </div>
                 </Link>
 
                 <Link href="/add-product">
                     <div className={stylePanel.navigationButton} id="add-product">
-                        <PlusCircle size={30} opacity={locate == "/add-product" ? 1 : 0.6} color="black"/>
+                        <PlusCircle size={30} opacity={locate == "/add-product" ? 1 : 0.6} color="white"/>
                     </div>
                 </Link>   
 
                 <Link href="/profile">
                     <div className={stylePanel.navigationButton} id="profile">
-                        <MessageCircle size={30} opacity={locate == "/profile" ? 1 : 0.6} color="black"/>
+                        <MessageCircle size={30} opacity={locate == "/profile" ? 1 : 0.6} color="white"/>
                     </div>
                 </Link>
                 
                 <Link href="/profile">
                     <div className={stylePanel.navigationButton} id="profile">
-                        <UserCircle size={30} opacity={locate == "/profile" ? 1 : 0.6} color="black"/>
+                        <UserCircle size={30} opacity={locate == "/profile" ? 1 : 0.6} color="white"/>
                     </div>
                 </Link>
             </nav>

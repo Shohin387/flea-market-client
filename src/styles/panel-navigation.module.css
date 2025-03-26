@@ -14,9 +14,8 @@
     padding-left: 8%;
 
     /*Тут мы кросоту наводим*/
-    border: 1.5px solid var(--purple-color-elem);
     border-radius: 120px;
-    background-color: rgba(245, 245, 245, 0.38);
+    background-color: rgba(0, 0, 0, 0.404);
     backdrop-filter: blur(6px);
     z-index: 10;
 }

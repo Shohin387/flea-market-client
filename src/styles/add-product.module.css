@@ -1,8 +1,10 @@
 .selectCategory {
     height: 30px;
-    border: var(--purple-color-elem) 2px solid;
-    border-radius:8px;
+    border:none;
+    outline: none;
     margin-bottom: 20px;
+    background-color: rgb(20, 20, 20);
+    color: white;
 }
 
 
@@ -14,8 +16,8 @@
 
 .formAddProduct {
     padding: 20px;
-    border: var(--purple-color-elem) 2px solid;
-    border-radius: 20px;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0px 10px 10px 4px rgb(14, 14, 14);
     display: grid;
     justify-content: center;
 }
@@ -27,7 +29,6 @@
     word-wrap: break-word;
     border: var(--purple-color-elem) 1.5px solid;
     align-items: center;
-    background-color: rgb(231, 231, 231);
     font-size: 12px;
     padding-left: 15px;
     border-radius: 10px;
@@ -40,14 +41,14 @@
 .InputDiscriptionProduct {
     background-color: rgba(255, 255, 255, 0);
     border: none;
-    border-bottom: var(--purple-color-elem) 2px solid;
+    border-bottom: var(--purple-color-elem) 1.3px solid;
     outline: none;
     height: 23px;
     z-index: 1;
 }
 
 .InputDiscriptionProduct::placeholder {
-    color: rgb(58, 58, 58);
+    color: rgb(231, 231, 231);
 }
 
 .btnForPublic {
@@ -63,7 +64,7 @@
     height: 120px;
     position: relative;
     width: 207px;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(22, 22, 22);
     left: 120%;
     overflow: hidden;
     bottom:  240%;

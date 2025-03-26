@@ -20,7 +20,7 @@ const PhotoAndInfo: FC<Data> = ({data, setIsFullScrean}) => {
     
     return (
         <article>
-            <Link href='/home'><ArrowLeft color="black" style={{margin:"10px 20px -20px 2%"}}/></Link>
+            <Link href='/home'><ArrowLeft color="white" style={{margin:"10px 20px -20px 2%"}}/></Link>
 
             <div style={{backgroundImage: `url(${data?.imgSrc})`, marginLeft: "3%", marginTop: "30px"}} className={styleProduct.conteiner}>
                 <div className={`${styleProduct.conteiner} `}>
@@ -28,7 +28,7 @@ const PhotoAndInfo: FC<Data> = ({data, setIsFullScrean}) => {
                 </div>
             </div>
 
-            <h1 className={styleProduct.priceProduct}>{data?.price} </h1><RussianRuble size={26} color="black"/>
+            <h1 className={styleProduct.priceProduct}>{data?.price} </h1><RussianRuble size={26} color="white"/>
             <p className={styleProduct.nameProduct}>{data?.nameProduct}</p>
             <div style={{marginLeft: "3%"}}>
                 <h2 style={{fontSize: "clamp(20px, 4vw, 28px)"}}>Описание </h2 >

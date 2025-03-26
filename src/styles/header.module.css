@@ -10,8 +10,6 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
-
-    background-color: rgb(255, 255, 255);
     backdrop-filter: blur(4.4px);
 }
 
@@ -45,16 +43,15 @@
 }
 
 .headerInput {
+    background-color: rgb(20, 20, 20);
     height: 28px;
-    border: 1.5px solid var(--purple-color-elem);
+    border: none;
     border-radius: 6px;
     width: 100%;
-    background-color: rgb(255, 255, 255);
-    color: black;
     padding-left: 30px;
     outline: none;
     width: 80%;
-    box-shadow: 0px 3px 8px 3px  rgba(197, 152, 228, 0.589);
+    box-shadow: 0px 3px 8px 3px  rgba(15, 11, 17, 0.589);
 }
 
 .searchImg {
@@ -67,7 +64,7 @@
 }
 
 .headerInput::placeholder {
-    color: black;
+    color: white
 }
 
 

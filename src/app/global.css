@@ -6,12 +6,14 @@
 
 
 :root {
-	--purple-color-elem: rgb(157, 15, 252)
+	--purple-color-elem: rgb(138, 26, 212)
 }
 
 
 
 body {
+	background-color: rgb(17, 17, 17);
+	color:  rgb(243, 242, 242);
 	font-family: robot;
 	margin: 0;
 	padding: 0;

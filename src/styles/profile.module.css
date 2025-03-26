@@ -60,12 +60,13 @@
 
 .mainBlockSupscribers {
 	display:grid;
+	width: inherit;
 	grid-template-rows: repeat(3, 1fr);
 	grid-auto-rows: 85px;
 	height: 265px;
 	overflow-y: scroll;
-	background-color: rgba(255, 255, 255, 0.452);
-	border: rgba(226, 233, 199, 0.897) solid 1.4px;
+	background-color: rgba(10, 10, 10, 0.452);
+	border: rgba(43, 44, 38, 0.897) solid 1.4px;
 	border-radius: 12px;
 
 
@@ -87,12 +88,12 @@
 	
 
 	&:not(:last-of-type) {
-		border-bottom: rgb(222, 231, 183) 1.5px solid;
+		border-bottom: rgb(32, 34, 28) 1.5px solid;
 	}
 }
 
 .textLink{
-	color: black;
+	color: white;
 	text-decoration: none;
 
 	&:hover {
