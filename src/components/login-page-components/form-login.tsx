@@ -29,7 +29,7 @@ const LogInProfile: FC = () => {
              <b><input type="checkbox" style={{width: "17px;", height: "17px"}} name="" id="" /> Принимаю все условия</b><br />
             <button className={styleForm.btnForPublic} type={!err ? "submit" : "reset"}><LogInIcon size={20} color="white"/> Войти</button>
             
-            <a style={{textDecoration: "none", fontSize: "12px", marginTop: "10px"}} href="/auth">Ещё не зарегестрированны?</a>
+            <a style={{textDecoration: "none", fontSize: "12px", marginTop: "10px"}} href="/regestration">Ещё не зарегестрированны?</a>
         </form>
         
         </section>

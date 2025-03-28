@@ -3,7 +3,7 @@
     border:none;
     outline: none;
     margin-bottom: 20px;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(15, 15, 15);
     color: white;
 }
 
@@ -64,7 +64,7 @@
     height: 120px;
     position: relative;
     width: 207px;
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(14, 14, 14);
     left: 120%;
     overflow: hidden;
     bottom:  240%;

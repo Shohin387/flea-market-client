@@ -24,7 +24,7 @@ const CreateProfile: FC = () => {
 
             <button className={styleForm.btnForPublic}  type={'reset'} ><UserPlus size={20} color="white"/> <b>Зарегестрироватся</b> </button>
             
-            <a style={{textDecoration: "none", fontSize: "12px", marginTop: "10px"}} href="/login">Уже зарегестрированны?</a>
+            <a style={{textDecoration: "none", fontSize: "12px", marginTop: "10px"}} href="/log-in">Уже зарегестрированны?</a>
         </form>
         
         </section>

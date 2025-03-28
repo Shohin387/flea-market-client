@@ -9,9 +9,10 @@
 
 .addProduct {
     display: grid;
+    overflow: hidden;
     justify-content: center;
     grid-auto-columns: 300px;
-    
+    width: 100vw;
 }
 
 .addProduct h1 {
@@ -22,26 +23,30 @@
 }
 
 .formAddProduct {
+    width: 100%;
     margin-top: 30%;
+    margin-bottom: 40px;
     height: 370px;
-    border: var(--purple-color-elem) 2px solid;
+    border: 1.4px solid rgb(41, 35, 27);
     border-radius:10px;
     display: grid;
     grid-auto-rows: 27px;
     align-content: center;
     justify-content: center;
-
+    box-shadow: 0px 9px 14px 7px rgb(10, 10, 10);
 }
 
 
 .InputDiscription {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgb(27, 27, 27);
     border: none;
-    border-bottom: var(--purple-color-elem) 2px solid;
     outline: none;
-    height: 23px;
+    width: 100%;
+    height: 28px;
     z-index: 2;
-    color: black;
+    color: rgb(247, 247, 247);
+    border: 1.4px solid rgb(41, 35, 27);
+    border-radius: 9px;
 }
 
 
@@ -53,7 +58,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    margin-top: -15px;
+    margin-top: 0px;
     border-radius: 3px;
     color: white;
     height: 30px;
@@ -65,9 +70,9 @@
 
 
 .placeholder {
-    color: rgb(134, 134, 134);
+    color: rgb(221, 221, 221);
     position: absolute;
-    margin-top: 3px;
+    margin-top: 6px;
     font-size: 15px;
     z-index: 2;
     transition: all .2s ease;
@@ -76,9 +81,9 @@
 }
 
 .placeholderActive {
-    color: rgb(25, 25, 26);
+    color: rgb(248, 248, 248);
     position: absolute;
-    margin-top: -14px;
+    margin-top: -16px;
     font-size: 14px;
     
     transition: all .2s ease;
