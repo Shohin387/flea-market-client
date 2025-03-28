@@ -1,0 +1,33 @@
+.conteinerMsg {
+	display: grid;
+	width:80%;
+	height: 78vh;
+	margin-top: 15px;
+	margin-left: 10.5%;
+	grid-template-columns: 1fr 3fr;
+	background-color: rgb(32, 32, 32);
+	border-radius: 10px 0px 0px 10px;
+	
+}
+
+.sideChatBlock {
+	background-color: rgb(29, 29, 29);
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	border-radius: 10px 0px 0px 10px;
+
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+
+.chat {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	align-items: center;
+	padding: 10px;
+
+}

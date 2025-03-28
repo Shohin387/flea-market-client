@@ -10,7 +10,7 @@ import Link from 'next/link'
 export default function Subscribers({el}: {el: userDataI}) {
 	return (
 		<>
-			<Avatar radius={50} size={60} urlAvatar={el.profilePhoto} userName={el.name}/>
+			<Avatar radius={50} size={60} urlAvatar={el.profilePhoto} userName={el.name} style={{margin: "8px"}}/>
 			<div >
 				<Link className={profileStyle.textLink} href={'user/' + el.id}>
 					<h3 className={profileStyle.textLink}>{truncateText(el.name, 18)}</h3>
