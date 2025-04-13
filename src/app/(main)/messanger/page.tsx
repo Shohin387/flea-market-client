@@ -1,7 +1,11 @@
 import ContainerMessanger from "@/components/messanger-components/ConteinerMessanger";
+import { Suspense } from "react";
 
 export default function MyProfile() {
   return (
-    <ContainerMessanger />
+    <Suspense fallback={'Загрузка...'}>
+      <ContainerMessanger />
+    </Suspense>
+    
   ) 
 }
