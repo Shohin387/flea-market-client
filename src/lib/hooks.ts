@@ -3,6 +3,7 @@ import { Store } from '../store/Store'
 import { CardsData } from '../interfaces/cardData.interface'
 import { userDataI } from '../interfaces/userData.interface'
 import {StaticImageData} from 'next/image'
+import { usePathname, useRouter } from 'next/navigation'
 
 
 type MyRootState = ReturnType<typeof Store.getState>
@@ -25,4 +26,16 @@ export default function useJoinData(id: number | string) {
         }
     })
     return allData[0]
+}
+
+
+
+export function useUpdateQueryParam (){
+    const {replace} = useRouter()
+    const thisPathName = usePathname()
+    return function (newValue:any) {
+        const params = new URLSearchParams()
+        params.set('chatID', newValue)
+        replace(`${thisPathName}?${params.toString()}`)
+    }
 }

@@ -92,6 +92,11 @@
 	}
 }
 
+.noTxtDecore {
+	text-decoration: none;
+
+}
+
 .textLink{
 	color: white;
 	text-decoration: none;

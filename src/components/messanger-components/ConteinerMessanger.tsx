@@ -1,29 +1,53 @@
 'use client'
-import { useEffect, useState } from "react";
-import { useTypedSelector } from "@/lib/hooks";
-import { ChatData } from "@/data/chatsData";
-import { userDataI } from "@/interfaces/userData.interface";
 import ChatsBlock from "./ChatBlock";
-import { ChatI } from "@/interfaces/chatData.interface";
 import msgStyle from '@/styles/messanger.module.css'
 import Messages from "./MessagesBlock";
-import { Message } from "@/data/messageData";
-
+import { MessangerData as data } from "@/data/messangerData";
+import { useEffect, useState } from "react";
+import { ChatI } from "@/interfaces/chat.interface";
+import { msgsData as msgs } from "@/data/msgsData";
+import { useSearchParams } from "next/navigation";
+import Avatar from "@/UI/Avatar";
+import { ArrowLeft, EllipsisVertical } from "lucide-react";
+import { useUpdateQueryParam } from "@/lib/hooks";
+import Link from "next/link";
 
 export default function ContainerMessanger() {
-	const [data, setData] = useState<ChatI[]>([])
-	const userData: userDataI[] = useTypedSelector(state => state.userDataReducer)
+	const [chats, setChats] = useState<ChatI[]>([])
+	const chatID = useSearchParams().get('chatID')
+	const updtChatID = useUpdateQueryParam()
 	
-		useEffect(() => {
-			const filtedChats = ChatData.filter(value => value.idRecipient == userData[0].id)
-			setData(filtedChats)
-
-		}, [])
-
+	useEffect(() => {
+		const chatsFilt = data.filter((value) => value.creatorID === 1 || value.participantID === 1)
+		setChats(chatsFilt)
+	}, [])
 
 		return(
 			<main className={msgStyle.conteinerMsg}>
-				<ChatsBlock data={data}/>
+				<ChatsBlock data={chats} chatID={chatID}/>
+
+				<section className={`${msgStyle.selfChat} ${chatID ? msgStyle.selfChatActiveForMobile : msgStyle.selfChatDisableForMobile}`}>
+					{ chatID &&
+					<>
+					<div className={msgStyle.headerChat}>
+						<ArrowLeft cursor={'pointer'} onClick={() => updtChatID('')} size={25}/>
+						<Avatar defaultMg={false} urlAvatar={chats[+chatID! - 1]?.participant.profilePhoto} userName={chats[+chatID! - 1]?.participant.name} size={40}/>
+
+						<h2><Link href={`user/${chats[+chatID! - 1]?.creator.id == 1 
+							? chats[+chatID! - 1]?.participant.id 
+							: chats[+chatID! - 1]?.creator.id}`}>
+								{chats[+chatID! - 1]?.creator.id == 1 
+								? chats[+chatID! - 1]?.participant.name 
+								: chats[+chatID! - 1]?.creator.name }
+						</Link></h2>
+						<EllipsisVertical cursor={'pointer'} />
+					</div>
+					
+					<Messages chatID={chatID}/>
+					</>
+					}
+				</section>
+				
 			</main>
 		)
 	

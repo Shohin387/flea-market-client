@@ -40,9 +40,9 @@ const PanelNavigation = ({children}: {children: React.PropsWithChildren | React.
                     </div>
                 </Link>   
 
-                <Link href="/profile">
-                    <div className={stylePanel.navigationButton} id="profile">
-                        <MessageCircle size={30} opacity={locate == "/profile" ? 1 : 0.6} color="white"/>
+                <Link href="/messanger">
+                    <div className={stylePanel.navigationButton} id="messanger">
+                        <MessageCircle size={30} opacity={locate == "/messanger" ? 1 : 0.6} color="white"/>
                     </div>
                 </Link>
                 

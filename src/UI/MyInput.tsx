@@ -38,8 +38,8 @@ const Input: FC<Input> = ({placeholderInput, typeInp, setValue, classNameCnt, va
 
     return (
         <label className={classNameCnt} htmlFor={name}>
-            <div className={placeholderClass}>{placeholderValue}</div>
-            <input autoComplete="off" name={name} className={classNameInp} onChange={el => setValue(el.target.value)} type={typeInp} value={value} disabled={disable}/>
+            <div className={placeholderClass}>{animation ? placeholderValue : ''}</div>
+            <input placeholder={!animation ? placeholderValue : ''} autoComplete="off" name={name} className={classNameInp} onChange={el => setValue(el.target.value)} type={typeInp} value={value} disabled={disable}/>
         </label>
     )
 }
