@@ -1,24 +1,26 @@
 
 
 .navigationPanel {
-    display: grid;
-    grid-template-columns:repeat(5, 120px);
-    position: fixed;
-    left: 15%;
-    top: 90%;
-    width: 60%;
-    height: 45px;
-    padding-top: 4px;
-    justify-content: center;
-    align-items: center;
-    padding-left: 8%;
-
-    /*Тут мы кросоту наводим*/
-    border-radius: 120px;
-    background-color: rgba(0, 0, 0, 0.404);
-    backdrop-filter: blur(6px);
-    z-index: 10;
+  display: grid;
+  grid-template-columns:repeat(5, 120px);
+  position: fixed;
+  left: 10%;
+  top: 90%;
+  width: 50%;
+  height: 45px;
+  padding-top: 4px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8%;
+  /*Тут мы кросоту наводим*/
+  border-radius: 120px;
+  background-color:#292929a3;
+  backdrop-filter: blur(6px);
+  border:#424538a3 1px solid;
+  box-shadow: inset 0 0 14px 4px #151515;
+  z-index: 10;
 }
+
 
 
 

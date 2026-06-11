@@ -10,7 +10,10 @@ const card: CardsData[] = [
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'Б/У',
+        salesmen: 'Частные лица' ,
+        comnMethod: 'Все'
     },
     {
         id: 2,
@@ -22,7 +25,10 @@ const card: CardsData[] = [
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'новое',
+        salesmen: 'Компании' ,
+        comnMethod: 'Звонки'
 
     },
     {
@@ -33,9 +39,12 @@ const card: CardsData[] = [
         discription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ratione praesentium error nisi provident ut, quos earum architecto fugiat debitis nesciunt, ad porro. Perspiciatis, dolores, itaque repellat quibusdam exercitationem doloremque accusantium illo aliquid molestias quos blanditiis recusandae commodi quaerat deserunt! Voluptas fuga, veritatis assumenda quia amet quos voluptatum atque provident.",
         price: 2800,
         adress: "Улица Пушкина, Дом Колотушкина",
-        category: 'Цифровая техника',
+        category: 'Электроника',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'Б/У',
+        salesmen: 'Частные лица' ,
+        comnMethod: 'Сообщения'
 
     },
     {
@@ -48,7 +57,10 @@ const card: CardsData[] = [
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'новое',
+        salesmen: 'Компании' ,
+        comnMethod: 'Все'
     }, 
     {
         id: 5,
@@ -58,9 +70,12 @@ const card: CardsData[] = [
         discription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ratione praesentium error nisi provident ut, quos earum architecto fugiat debitis nesciunt, ad porro. Perspiciatis, dolores, itaque repellat quibusdam exercitationem doloremque accusantium illo aliquid molestias quos blanditiis recusandae commodi quaerat deserunt! Voluptas fuga, veritatis assumenda quia amet quos voluptatum atque provident.",
         price: 40000,
         adress: "Улица Пушкина, Дом Колотушкина",
-        category: 'Цифровая техника',
+        category: 'Электроника',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'новое',
+        salesmen: 'Частные лица' ,
+        comnMethod: 'Все'
     },
     {
         id: 6,
@@ -70,9 +85,12 @@ const card: CardsData[] = [
         discription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ratione praesentium error nisi provident ut, quos earum architecto fugiat debitis nesciunt, ad porro. Perspiciatis, dolores, itaque repellat quibusdam exercitationem doloremque accusantium illo aliquid molestias quos blanditiis recusandae commodi quaerat deserunt! Voluptas fuga, veritatis assumenda quia amet quos voluptatum atque provident.",
         price: 1000,
         adress: "Улица Пушкина, Дом Колотушкина",
-        category: 'Цифровая техника',
+        category: 'Электроника',
         coordinate: {lat: 9, lng: 8},
-        sold: true
+        sold: true,
+        state: 'новое',
+        salesmen: 'Частные лица' ,
+        comnMethod: 'Все'
 
     },
     {
@@ -83,9 +101,12 @@ const card: CardsData[] = [
         discription: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ratione praesentium error nisi provident ut, quos earum architecto fugiat debitis nesciunt, ad porro. Perspiciatis, dolores, itaque repellat quibusdam exercitationem doloremque accusantium illo aliquid molestias quos blanditiis recusandae commodi quaerat deserunt! Voluptas fuga, veritatis assumenda quia amet quos voluptatum atque provident.",
         price: 130000,
         adress: "Улица Пушкина, Дом Колотушкина",
-        category: 'Цифровая техника',
+        category: 'Электроника',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'Б/У',
+        salesmen: 'Компании' ,
+        comnMethod: 'Все'
 
     },
 
@@ -99,7 +120,10 @@ const card: CardsData[] = [
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'новое',
+        salesmen: 'Частные лица' ,
+        comnMethod: 'Все'
     },
     {
         id: 9,
@@ -111,7 +135,10 @@ const card: CardsData[] = [
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'Б/У',
+        salesmen: 'Частные лица' ,
+        comnMethod: 'Все'
 
     },
 
@@ -126,7 +153,10 @@ const card: CardsData[] = [
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'новое',
+        salesmen: 'Частные лица' ,
+        comnMethod: 'Все'
     },
     {
         id: 11,
@@ -138,7 +168,10 @@ const card: CardsData[] = [
         adress: "Улица Пушкина, Дом Колотушкина",
         category: 'Одежда',
         coordinate: {lat: 9, lng: 8},
-        sold: false
+        sold: false,
+        state: 'новое',
+        salesmen: 'Частные лица' ,
+        comnMethod: 'Сообщения'
 
     },
 ]

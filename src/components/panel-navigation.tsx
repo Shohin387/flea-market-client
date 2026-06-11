@@ -21,7 +21,7 @@ const PanelNavigation = ({children}: {children: React.PropsWithChildren | React.
 
             {children}
     
-            <nav  className={stylePanel.navigationPanel}>
+            <nav style={locate == '/add-product' || locate == '/messanger' ? {left: '20%'} : {}} className={stylePanel.navigationPanel}>
                 <Link href="/home">
                     <div className={stylePanel.navigationButton} id="home">
                         <LayoutDashboard size={30} color="white" opacity={locate == "/home" ? 1 : 0.6}/>

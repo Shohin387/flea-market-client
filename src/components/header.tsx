@@ -4,7 +4,7 @@ import  {FC} from "react";
 import styleHeader from "../styles/header.module.css"
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
-
+import Image from 'next/image'
 
 const Header: FC = () => {
     const navigate = useRouter()
@@ -12,7 +12,7 @@ const Header: FC = () => {
     return (
         <>
             <header className={styleHeader.header}>
-                <b className={styleHeader.headerText}>Барахолка</b>
+                <Image width={200} height={40} src='/logo.png' alt="logo" />
                 <div className={styleHeader.searchBlock}>
                     <div>
                         <Search className={styleHeader.searchImg}/>
@@ -22,12 +22,10 @@ const Header: FC = () => {
                     
 
                     <button onClick={() => {
-                        
                         const inp = document.getElementsByTagName("input")[0]
-
                         if (inp.value) {
-                            
                             navigate.push('/found-products?prompt=' + inp.value)
+                            console.log(inp.value)
                         } else navigate.replace('/home')
                         
                       }} className={styleHeader.searchBtn} type="button">поиск</button>

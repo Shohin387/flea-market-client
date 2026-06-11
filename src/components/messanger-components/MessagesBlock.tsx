@@ -8,6 +8,7 @@ import Input from "@/UI/MyInput";
 
 export default function Messages({chatID}: {chatID: string | null}) {
 	const [msgs, setMsgs] = useState<MsgsI[]>([])
+	const [value, setValue] = useState('')
 	useEffect(() => {
 		const filtMsgs = msgsData.filter(value => value.chatID === +chatID!)
 		setMsgs(filtMsgs)
@@ -40,8 +41,19 @@ export default function Messages({chatID}: {chatID: string | null}) {
 				backgroundColor: 'rgb(46, 46, 46)',
 				borderTop: 'solid rgb(22, 22, 22) 1.5px'
 			}}>
-				<Input placeholderInput="Введите сообение..." typeInp="text" animation={false} classNameInp={msgStyle.inpForSendMsg}/>
-				<Send cursor={'pointer'} style={{marginBottom: '-7px'}} color='rgb(128, 128, 128)'/>
+				<input value={value} onChange={ev => setValue(ev.target.value)} placeholder="Введите сообение..." type="text" className={msgStyle.inpForSendMsg}/>
+				<Send onClick={() => {
+					if (value) {
+						setMsgs(prev => [...prev, {
+							id: prev.at(-1)!.id + 1,
+							chatID: +chatID!, 
+							senterID: 1,
+							value,
+							dispatchDate: ''
+						}])
+						setValue('')
+					}
+				}} cursor={'pointer'} style={{marginBottom: '-7px'}} color='rgb(128, 128, 128)'/>
 			</div>
 		</>
 	)

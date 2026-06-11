@@ -4,7 +4,7 @@ import './global.css'
 export default function MainLayout({children}: {children: React.ReactNode}) {
 	return (
 		<PanelNavigation>
-			<div className="scrolling">
+			<div>
 				{children}
 			</div>
 		</PanelNavigation>

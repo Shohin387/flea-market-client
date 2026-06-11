@@ -16,9 +16,9 @@ const CategoryProduct: FC = (): JSX.Element => {
         <h1>Новое Объявление</h1>
         <h4>Выберите категорию</h4>
         <select className={styleCategory.selectCategory} >
-            <option value="Бытовая техника">Бытовая техника</option>
-            <option value="Цифровая техника">Цифровая техника</option>
-            <option value="Одежда">Одежда</option>
+            <option className={styleCategory.opt} value="Бытовая техника">Бытовая техника</option>
+            <option className={styleCategory.opt} value="Цифровая техника">Цифровая техника</option>
+            <option className={styleCategory.opt} value="Одежда">Одежда</option>
         </select>
 
         <form className={styleCategory.formAddProduct} action="">
@@ -35,7 +35,7 @@ const CategoryProduct: FC = (): JSX.Element => {
         <div className={styleCategory.blockForPhoto}>
             {
                 pathFile 
-                ? <><Image src={URL.createObjectURL(pathFile!)} alt="Your image" /><br /></>
+                ? <><Image width={200} height={200} src={URL.createObjectURL(pathFile!)} alt="Your image" /><br /></>
                 : <b>Здесь будут <br /> ваши фото</b>
             }
                 

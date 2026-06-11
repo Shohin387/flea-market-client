@@ -60,6 +60,10 @@
     z-index: 1;
 }
 
+.opt {
+    background-color: black;
+}
+
 .blockForPhoto  {
     display: grid;
     height: 120px;
@@ -77,6 +81,8 @@
 .blockForPhoto img {
     height: 120px;
 }
+
+
 
 @media (max-width: 848px) {
     .blockForPhoto {

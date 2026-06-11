@@ -1,4 +1,4 @@
-type TypeCategory = 'Одежда' | 'Цифровая техника' | 'Бытовая Техника'
+type TypeCategory = 'Одежда' | 'Электроника' | 'Бытовая Техника' | 'Недвижимость' | 'Транспорт' | 'Работа' | 'Услуги'
 type TypeCoordinate = {lat: number, lng: number}
 
 export interface CardsData {
@@ -11,5 +11,8 @@ export interface CardsData {
     adress: string 
     category: TypeCategory,
     coordinate: TypeCoordinate,
-    sold: boolean
+    sold: boolean,
+    state:  'новое' | 'Б/У',
+	salesmen: 'Частные лица' | 'Компании',
+	comnMethod: 'Все' | 'Звонки' | 'Сообщения'
 }

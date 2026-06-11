@@ -6,7 +6,6 @@ import SubscribersConteiner from "./subsComponent/SubscribersMainBlock"
 import Avatar from "@/UI/Avatar"
 import clsx from "clsx"
 import { ContextUserData } from "./conteiner-profile"
-import { Send } from "lucide-react"
 
 
 export default function HeaderProfile({id}: {id: string}) {
@@ -19,7 +18,7 @@ export default function HeaderProfile({id}: {id: string}) {
     return (
         <section className={profileStyle.headerProfile}>
             <div className={profileStyle.photoProfile}>
-                <Avatar urlAvatar={data?.profilePhoto} userName={data?.name}/>
+                <Avatar defaultMg={false} size={380} urlAvatar={data?.profilePhoto} userName={data?.name}/>
                 <h3 className={data?.profilePhoto ? clsx(profileStyle.name, profileStyle.m_20) : profileStyle.m_20}>{data?.name}</h3>
                 
                 <p className={data?.profilePhoto ? `${profileStyle.countSubs} ${profileStyle.m_20} ${profileStyle.mobile}` : `${profileStyle.m_20}`} >{countSubs} Подписчиков<br /></p>

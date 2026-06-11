@@ -4,6 +4,8 @@ import { CardsData } from '../interfaces/cardData.interface'
 import { userDataI } from '../interfaces/userData.interface'
 import {StaticImageData} from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
+import { ChatI } from '@/interfaces/chat.interface'
+import { actions as chatActions } from '@/store/msgsStore'
 
 
 type MyRootState = ReturnType<typeof Store.getState>
@@ -39,3 +41,4 @@ export function useUpdateQueryParam (){
         replace(`${thisPathName}?${params.toString()}`)
     }
 }
+

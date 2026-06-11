@@ -2,6 +2,7 @@
 
 import { ComponentState, FC, useEffect, useState } from "react";
 import styleForm from '@/styles/form-style.module.css'
+import { HtmlProps } from "next/dist/shared/lib/html-context.shared-runtime";
 
 interface Input {
     placeholderInput: string,
@@ -12,10 +13,11 @@ interface Input {
     classNameInp: string,
     classNameCnt?: string,
     animation?: boolean,
-    typeInp: string
+    typeInp: string,
+    params: HtmlProps
 }
 
-const Input: FC<Input> = ({placeholderInput, typeInp, setValue, classNameCnt, value, disable=false, name, classNameInp, animation=true}) => {
+const Input: FC<Input> = ({placeholderInput, typeInp, setValue, classNameCnt, value, disable=false, name, classNameInp, animation=true, params}) => {
     const [placeholderClass, setPlaceholderClass] = useState(styleForm.placeholder)
     const [placeholderValue, setPlaceholderValue] = useState(placeholderInput)
 
@@ -39,7 +41,7 @@ const Input: FC<Input> = ({placeholderInput, typeInp, setValue, classNameCnt, va
     return (
         <label className={classNameCnt} htmlFor={name}>
             <div className={placeholderClass}>{animation ? placeholderValue : ''}</div>
-            <input placeholder={!animation ? placeholderValue : ''} autoComplete="off" name={name} className={classNameInp} onChange={el => setValue(el.target.value)} type={typeInp} value={value} disabled={disable}/>
+            <input {...params} placeholder={!animation ? placeholderValue : ''} autoComplete="off" name={name} className={classNameInp} onChange={el => setValue(el.target.value)} type={typeInp} value={value} disabled={disable}/>
         </label>
     )
 }

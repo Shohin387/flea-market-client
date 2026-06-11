@@ -4,6 +4,11 @@
 	overflow-x: hidden;
 }
 
+main {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+}
+
 .scrolling {
 	&::-webkit-scrollbar {
 		width: 5px 

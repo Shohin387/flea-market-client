@@ -2,25 +2,25 @@
 import ChatsBlock from "./ChatBlock";
 import msgStyle from '@/styles/messanger.module.css'
 import Messages from "./MessagesBlock";
-import { MessangerData as data } from "@/data/messangerData";
 import { useEffect, useState } from "react";
 import { ChatI } from "@/interfaces/chat.interface";
-import { msgsData as msgs } from "@/data/msgsData";
 import { useSearchParams } from "next/navigation";
 import Avatar from "@/UI/Avatar";
 import { ArrowLeft, EllipsisVertical } from "lucide-react";
-import { useUpdateQueryParam } from "@/lib/hooks";
+import { useTypedSelector, useUpdateQueryParam } from "@/lib/hooks";
 import Link from "next/link";
 
 export default function ContainerMessanger() {
 	const [chats, setChats] = useState<ChatI[]>([])
 	const chatID = useSearchParams().get('chatID')
 	const updtChatID = useUpdateQueryParam()
+	const data: ChatI[] = useTypedSelector(state => state.chatReducer)
 	
 	useEffect(() => {
 		const chatsFilt = data.filter((value) => value.creatorID === 1 || value.participantID === 1)
 		setChats(chatsFilt)
 	}, [])
+
 
 		return(
 			<main className={msgStyle.conteinerMsg}>

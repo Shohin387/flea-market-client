@@ -25,9 +25,11 @@ const BlockForPay: FC<{data: TypeAllData}> = ({data}) => {
                 
 
                 <div className={styleProduct.btns}>
-                    <button className={classChatBtn}>Написать</button>
-                    <button className={styleProduct.pay} type="button">Добавить в карзину</button>
+                    <Link style={{display:'block'}} href={'/messanger?chatID=1'}><button className={classChatBtn}>Написать</button></Link>
+                    <Link style={{display:'block'}} href={'/home'}><button className={styleProduct.pay} type="button">Купить</button></Link>
                 </div>
+                <Link style={{display:'block'}} href={'/home'}><button className={classChatBtn}>Добавить в карзину</button></Link>
+
             </article>
         </section>
     )
