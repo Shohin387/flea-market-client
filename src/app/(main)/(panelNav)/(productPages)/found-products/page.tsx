@@ -7,7 +7,7 @@ import SideBar from "@/components/side-bar"
 import { useTypedSelector } from "@/lib/hooks"
 import { filtration, searchProduct } from "@/lib/utils"
 import { useSearchParams } from "next/navigation"
-import { Suspense, useContext } from "react"
+import { useContext } from "react"
 
 
 export default function FoundDataPage() {
@@ -19,11 +19,11 @@ export default function FoundDataPage() {
 
 
     return (
-        <Suspense fallback={<div>Загрузка</div>}>
+        <>
             <section>
                 <FoundDataPageComp data={resFiltration} textPrompt={`${prompt.get('prompt')}`}/>
             </section>
             <SideBar filters={dataFilter?.filters} setFilters={dataFilter!.setFilters}/>
-        </Suspense>
+        </>
     )
 }

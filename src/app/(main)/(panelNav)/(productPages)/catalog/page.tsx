@@ -15,14 +15,13 @@ export default function Catalog() {
 	const category = data.filter(el => el.category == prompt.get('prompt'))
 	const filter = useContext(FilterCntx)
 	const filtrationData = filtration(category, filter!.filters)
-	console.log(category)
 	return (
-		<Suspense>
+		<>
 			<section>
 				<h1>Категория - {prompt.get('prompt')}</h1>
 				<AllCards ReducerData={filtrationData}/>
 			</section>
 			<SideBar filters={filter!.filters} setFilters={filter!.setFilters}/>
-		</Suspense>
+		</>
 	)
 }

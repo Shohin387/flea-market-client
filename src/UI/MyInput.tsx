@@ -2,9 +2,8 @@
 
 import { ComponentState, FC, useEffect, useState } from "react";
 import styleForm from '@/styles/form-style.module.css'
-import { HtmlProps } from "next/dist/shared/lib/html-context.shared-runtime";
 
-interface Input {
+interface InputI {
     placeholderInput: string,
     value?: string,
     setValue?: ComponentState
@@ -16,7 +15,7 @@ interface Input {
     typeInp: string,
 }
 
-const Input: FC<Input> = ({placeholderInput, typeInp, setValue, classNameCnt, value, disable=false, name, classNameInp, animation=true}) => {
+const Input: FC<InputI> = ({placeholderInput, typeInp, setValue, classNameCnt, value, disable=false, name, classNameInp, animation=true}) => {
     const [placeholderClass, setPlaceholderClass] = useState(styleForm.placeholder)
     const [placeholderValue, setPlaceholderValue] = useState(placeholderInput)
 
