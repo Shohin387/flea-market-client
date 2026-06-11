@@ -14,10 +14,9 @@ interface Input {
     classNameCnt?: string,
     animation?: boolean,
     typeInp: string,
-    params: HtmlProps
 }
 
-const Input: FC<Input> = ({placeholderInput, typeInp, setValue, classNameCnt, value, disable=false, name, classNameInp, animation=true, params}) => {
+const Input: FC<Input> = ({placeholderInput, typeInp, setValue, classNameCnt, value, disable=false, name, classNameInp, animation=true}) => {
     const [placeholderClass, setPlaceholderClass] = useState(styleForm.placeholder)
     const [placeholderValue, setPlaceholderValue] = useState(placeholderInput)
 
@@ -41,7 +40,7 @@ const Input: FC<Input> = ({placeholderInput, typeInp, setValue, classNameCnt, va
     return (
         <label className={classNameCnt} htmlFor={name}>
             <div className={placeholderClass}>{animation ? placeholderValue : ''}</div>
-            <input {...params} placeholder={!animation ? placeholderValue : ''} autoComplete="off" name={name} className={classNameInp} onChange={el => setValue(el.target.value)} type={typeInp} value={value} disabled={disable}/>
+            <input placeholder={!animation ? placeholderValue : ''} autoComplete="off" name={name} className={classNameInp} onChange={el => setValue(el.target.value)} type={typeInp} value={value} disabled={disable}/>
         </label>
     )
 }
