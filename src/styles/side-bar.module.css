@@ -29,6 +29,31 @@
 }
 
 
+.noScrollBar {
+
+	font-size: 30px;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.pay {
+	  width: 100%;
+    height: 52px;
+    color: white;
+    background-color: #02D15C;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    transition: all 0.5s ease;
+
+		&:hover {
+			transform: scale(1.03);
+		}
+}
+
 
 .activeFilterBtn {
 	background-color: #8A1AD4;

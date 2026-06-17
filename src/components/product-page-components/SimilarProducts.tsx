@@ -7,11 +7,11 @@ import { useEffect, useState } from "react";
 import cardStyle from '@/styles/card.module.css'
 
 
-export default function SimilarProducts({category}: {category: string | undefined}) {
+export default function SimilarProducts({category, productID}: {category: string | undefined, productID: number | undefined}) {
 	const cards: CardsData[] = useTypedSelector(state => state.cardsReducer)
 	const [data, setData] = useState<CardsData[]>([])
 	useEffect(() => {
-		const similar = cards.filter(value => value.category == category)
+		const similar = cards.filter(value => value.category == category && value.id != productID)
 		setData(similar)
 	}, [category])
 

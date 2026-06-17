@@ -6,6 +6,12 @@ import { TypeAllData } from "./conteiner-info"
 import { userDataI } from "../../interfaces/userData.interface"
 import { ArrowLeft, RussianRuble } from "lucide-react"
 import Link from "next/link"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination } from "swiper/modules"
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
 
 interface Data {
     data: Omit<TypeAllData, keyof userDataI>,
@@ -22,9 +28,26 @@ const PhotoAndInfo: FC<Data> = ({data, setIsFullScrean}) => {
         <article>
             <Link href='/home'><ArrowLeft color="white" style={{margin:"10px 20px -20px 2%"}}/></Link>
 
-            <div style={{backgroundImage: `url(${data?.imgSrc})`, marginLeft: "3%", marginTop: "30px"}} className={styleProduct.conteiner}>
+            <div style={{backgroundImage: `url(${data?.imgSrc![0]})`, marginLeft: "3%", marginTop: "30px"}} className={styleProduct.conteiner}>
                 <div className={`${styleProduct.conteiner} `}>
-                    <img src={data?.imgSrc!} onClick={() => setIsFullScrean((prev) => !prev)} alt="" />
+                    <Swiper 
+                    modules={[Navigation, Pagination]}
+                    navigation
+                    pagination={{ clickable: true }}
+                    allowTouchMove={false}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    loop
+                    style={{width: '100%', height: 'auto'}}
+                >
+                    {
+                        data?.imgSrc?.map((src, index) => (
+                            <SwiperSlide style={{display: 'grid', justifyContent: 'center'}} key={index}>
+                                <img onClick={() => setIsFullScrean((prev) => !prev)} src={src} alt="" />
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
                 </div>
             </div>
 

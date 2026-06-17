@@ -15,7 +15,7 @@ const Card: React.FC<{el: CardsData}> = ({el}) => {
         
             <Link href={"/product/" + el.id}>
                 <div className={styleCard.conteinerImg}>
-                    <img alt="Фото товара" className={styleCard.imgCard} src={el.imgSrc!} />
+                    <img alt="Фото товара" className={styleCard.imgCard} src={el.imgSrc![0]} />
                 </div>
                 <div className={styleCard.info}>
                     <h3 style={{margin: "0px"}}>{el.nameProduct}</h3>

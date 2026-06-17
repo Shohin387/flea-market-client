@@ -1,11 +1,12 @@
+"use client"
+
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { Store } from '../store/Store'
 import { CardsData } from '../interfaces/cardData.interface'
 import { userDataI } from '../interfaces/userData.interface'
 import {StaticImageData} from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
-import { ChatI } from '@/interfaces/chat.interface'
-import { actions as chatActions } from '@/store/msgsStore'
+
 
 
 type MyRootState = ReturnType<typeof Store.getState>

@@ -28,9 +28,9 @@ const PanelNavigation = ({children}: {children: React.PropsWithChildren | React.
                     </div>
                 </Link>
 
-                <Link href="/profile">
-                    <div className={stylePanel.navigationButton} id="profile">
-                        <ShoppingCart size={30} opacity={locate == "/basket" ? 1 : 0.6} color="white"/>
+                <Link href="/busket">
+                    <div className={stylePanel.navigationButton} id="busket">
+                        <ShoppingCart size={30} opacity={locate == "/busket" ? 1 : 0.6} color="white"/>
                     </div>
                 </Link>
 

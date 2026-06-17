@@ -1,7 +1,9 @@
+'use client'
+
 import sideBar from '@/styles/side-bar.module.css'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { Dispatch, FC, SetStateAction, useState } from 'react'
+import { Dispatch, FC, SetStateAction } from 'react'
 
 
 interface FiltersI {
@@ -14,10 +16,13 @@ interface FiltersI {
 
 interface Props {
 	filters:FiltersI | undefined,
-	setFilters: Dispatch<SetStateAction<FiltersI>>
+	setFilters: Dispatch<SetStateAction<FiltersI>>,
+	busket?: boolean,
+	price?: number,
+	setShow?: Dispatch<SetStateAction<Boolean>>
 } 
 
-const SideBar: FC<Props> = ({filters, setFilters}) => {
+const SideBar: FC<Props> = ({filters, setFilters, busket=false, price, setShow}) => {
 	const activeFilterBtn = clsx(sideBar.filterBtn, sideBar.activeFilterBtn)
 
 
@@ -32,20 +37,25 @@ const SideBar: FC<Props> = ({filters, setFilters}) => {
 
 	return (
 		<section className={sideBar.filter}>
-			<div className={sideBar.categorys}>
-				<h1 style={{textAlign: 'center'}}>Кaтегории</h1>
-				<hr/>
-				<ul style={{padding: 0}}>
-					<li className={sideBar.category}><Link href={'/home'} style={{color: 'white'}}>Все</Link></li>
-					<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Электроника'} style={{color: 'white'}}>Электроника</Link> </li>
-					<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Одежда'} style={{color: 'white'}}>Одежда</Link> </li>
-					<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Недвижимость'} style={{color: 'white'}}>Недвижимость</Link> </li>
-					<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Бытовая техника'} style={{color: 'white'}}>Бытовая техника</Link></li>
-					<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Транспорт'} style={{color: 'white'}}>Транспорт</Link> </li>
-					<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Работа'} style={{color: 'white'}}>Работа</Link> </li>
-					<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Услуги'} style={{color: 'white'}}>Услуги</Link> </li>
-				</ul>
-			</div>
+			{!busket
+				? <div className={sideBar.categorys}>
+					<h1 style={{textAlign: 'center'}}>Кaтегории</h1>
+					<hr/>
+					<ul style={{padding: 0}}>
+						<li className={sideBar.category}><Link href={'/home'} style={{color: 'white'}}>Все</Link></li>
+						<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Электроника'} style={{color: 'white'}}>Электроника</Link> </li>
+						<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Одежда'} style={{color: 'white'}}>Одежда</Link> </li>
+						<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Недвижимость'} style={{color: 'white'}}>Недвижимость</Link> </li>
+						<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Бытовая техника'} style={{color: 'white'}}>Бытовая техника</Link></li>
+						<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Транспорт'} style={{color: 'white'}}>Транспорт</Link> </li>
+						<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Работа'} style={{color: 'white'}}>Работа</Link> </li>
+						<li className={sideBar.category}><Link href={'/catalog?prompt=' + 'Услуги'} style={{color: 'white'}}>Услуги</Link> </li>
+					</ul>
+				</div>
+
+				: <></>
+			}
+			
 			
 			<div>
 				<h1 style={{textAlign: "center"}}>Фильтры</h1>
@@ -74,6 +84,16 @@ const SideBar: FC<Props> = ({filters, setFilters}) => {
 				<button onClick={() => setFilters(prev => ({...prev, comnMethod: 'Сообщения'}))} className={filters?.comnMethod == 'Сообщения' ? activeFilterBtn : sideBar.filterBtn}>Сообщения</button>
 				
 			</div>
+
+			{busket
+				? <div>
+					<hr />
+					<h1 className={sideBar.noScrollBar} style={{overflowX: 'scroll', width: '100%', textWrap:'nowrap'}}>ИТОГО: {price}руб</h1>
+					<button disabled={price ? false : true} onClick={() => setShow!(true)} style={price ? {}: {cursor: 'no-drop', opacity: 0.8}} className={sideBar.pay}>Оплатить</button>
+				</div>
+
+				: <></>
+			}
 		</section>
 			
 	)

@@ -32,8 +32,8 @@ const ConteinerInfo: FC = () => {
 
             <PhotoAndInfo setIsFullScrean={setIsFullScrean} data={data!}/>
             <BlockForPay data={data!}/>
-            <SimilarProducts category={data?.category}/>
-            <FulllScreanImg setIsFullScrean={setIsFullScrean} isFullScrean={isFullScrean} img={`${data?.imgSrc}`}/>
+            <SimilarProducts productID={data?.id} category={data?.category}/>
+            <FulllScreanImg setIsFullScrean={setIsFullScrean} isFullScrean={isFullScrean} img={data?.imgSrc}/>
         </section>
     )
 }
