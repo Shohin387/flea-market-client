@@ -19,7 +19,7 @@ interface Props {
 	setFilters: Dispatch<SetStateAction<FiltersI>>,
 	busket?: boolean,
 	price?: number,
-	setShow?: Dispatch<SetStateAction<Boolean>>
+	setShow?: Dispatch<SetStateAction<boolean>>
 } 
 
 const SideBar: FC<Props> = ({filters, setFilters, busket=false, price, setShow}) => {

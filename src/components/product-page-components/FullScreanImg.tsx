@@ -12,7 +12,7 @@ import 'swiper/css/pagination'
 interface FulllScreanImg {
     setIsFullScrean: Dispatch<SetStateAction<boolean>>,
     isFullScrean: boolean,
-    img: string[] | undefined
+    img: string[] | null | undefined 
 }
 
 
