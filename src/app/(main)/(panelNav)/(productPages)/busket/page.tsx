@@ -32,7 +32,7 @@ export default function Busket() {
 		<>
 			<section style={{marginLeft: '30px'}}>
 				{	filterBusket.length > 0
-					? <><h2>Ваши товары в корзине</h2><AllCards busket ReducerData={filterBusket}/> <DialogBusket show={show} setShow={setShow} cards={userBusket}/></>
+					? <><h2>Ваши товары в корзине</h2><AllCards busket ReducerData={filterBusket}/> <DialogBusket show={show} setShow={setShow} cards={filterBusket}/></>
 					: <><h1 style={{textAlign: 'center'}}>У вас в корзине нет товаров!</h1> </>
 
 				}

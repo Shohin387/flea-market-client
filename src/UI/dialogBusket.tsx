@@ -47,7 +47,7 @@ export default function DialogBusket({cards, show=false, setShow}: {cards: Cards
 									</span>
 									
 									<div>
-										{el?.imgSrc?.slice(0, 2 | 1).map((src, index) => (
+										{el?.imgSrc?.slice(0, 2).map((src, index) => (
 											<div key={index} className={dialogStyle.imgCnt}>
 												<img src={src!} alt="" />
 											</div>
