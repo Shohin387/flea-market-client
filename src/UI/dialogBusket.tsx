@@ -24,7 +24,7 @@ export default function DialogBusket({cards, show=false, setShow}: {cards: Cards
 	}, [])
 
 	useEffect(() => {
-		setSelectedCards(cards.filter(el => selected.includes(el.id)))
+		setSelectedCards(cards.filter(el => selected.includes(el?.id)))
 	}, [selected])
 
 	return (
@@ -39,15 +39,15 @@ export default function DialogBusket({cards, show=false, setShow}: {cards: Cards
 					<div className={dialogStyle.scroll}>
 						{
 							cards.map(el => (
-								<div className={dialogStyle.item} key={el.id}>
-									<input checked={selected.includes(el.id)} onChange={() => select(el.id)} className={dialogStyle.checking} type="checkbox" name="" id="" />
+								<div className={dialogStyle.item} key={el?.id}>
+									{cards.length != 1 ?<input checked={selected.includes(el?.id)} onChange={() => select(el?.id)} className={dialogStyle.checking} type="checkbox" name="" id="" /> : <div></div>}
 									<span style={{display: 'grid', alignItems: 'center'}}>
-										<b style={{margin: '0px', fontSize: '23px',}}>{el.nameProduct}</b>
-										<p style={{margin: '0px', fontSize: '23px',}}>{el.price} руб</p>
+										<b style={{margin: '0px', fontSize: '23px',}}>{el?.nameProduct}</b>
+										<p style={{margin: '0px', fontSize: '23px',}}>{el?.price} руб</p>
 									</span>
 									
 									<div>
-										{el.imgSrc?.slice(0, 2 | 1).map((src, index) => (
+										{el?.imgSrc?.slice(0, 2 | 1).map((src, index) => (
 											<div key={index} className={dialogStyle.imgCnt}>
 												<img src={src!} alt="" />
 											</div>
@@ -59,7 +59,7 @@ export default function DialogBusket({cards, show=false, setShow}: {cards: Cards
 					</div>
 					
 				</div>
-				<button className={dialogStyle.payBtn}>Оплатить | {selectedCards.reduce((sum, currentValue) => sum + currentValue.price, 0)} руб</button>
+				<button className={dialogStyle.payBtn}>Оплатить | {cards.length != 1 ? selectedCards.reduce((sum, currentValue) => sum + currentValue.price, 0) : cards[0].price} руб</button>
 			</article>
 			
 		</>

@@ -29,7 +29,6 @@ const ConteinerInfo: FC = () => {
 
     return (
         <section className={styleProduct.conteinerInfo}>
-
             <PhotoAndInfo setIsFullScrean={setIsFullScrean} data={data!}/>
             <BlockForPay data={data!}/>
             <SimilarProducts productID={data?.id} category={data?.category}/>
